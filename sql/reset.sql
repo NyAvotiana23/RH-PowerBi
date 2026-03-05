@@ -22,6 +22,8 @@ DROP TABLE IF EXISTS Candidature CASCADE;
 DROP TABLE IF EXISTS Annonce CASCADE;
 DROP TABLE IF EXISTS Candidat CASCADE;
 DROP TABLE IF EXISTS Departement CASCADE;
+DROP TABLE IF EXISTS Configuration CASCADE;
+DROP TABLE IF EXISTS BaremeIRSA CASCADE;
 
 -- Suppression des index (CASCADE les supprime deja, mais par securite)
 DROP INDEX IF EXISTS idx_employe_departement;
@@ -37,6 +39,11 @@ DROP INDEX IF EXISTS idx_absence_employe;
 DROP INDEX IF EXISTS idx_hs_employe;
 DROP INDEX IF EXISTS idx_formation_employe;
 DROP INDEX IF EXISTS idx_performance_employe;
+DROP INDEX IF EXISTS idx_config_unite;
+DROP INDEX IF EXISTS idx_config_cle;
+DROP INDEX IF EXISTS idx_irsa_tranche;
+
+
 
 -- Message de confirmation
 DO $$
