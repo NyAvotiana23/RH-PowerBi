@@ -26,6 +26,11 @@
         - b) Calcul des heures supplémentaires
         - c) Gestion des demandes d'heures supplémentaires
         - d) Génération de rapports d'heures supplémentaires
+    - 6) Vue des configurations :
+        - a) Cotisations sociales
+        - b) Salaire minimum
+        - c) Barème IRSA (Impôt sur les Revenus Salariaux et Assimilés)
+        - d) Majoration des heures supplémentaires
 
 ## Attente : 
     Script de base de donnes des tables en PostgreSql pour les fonctionnalités mentionnées ci-dessus.
@@ -35,7 +40,7 @@
 
 
 ## Tables : 
-    Departement, Annonce, Candidature, Entretien, Candidat,
+    Departement, Annonce, Candidature, Entretien, Candidat, Postes,
     Employe, DossierEmploye(une colonne Json pour les details), Performance,
     Conge, Absence, Formation, Paie, AvantageSocial,
     ImpotDeduction, BulletinPaie,
@@ -55,3 +60,6 @@
     - Graphique filtrables pour permettre une analyse approfondie des données.
     - Utilisation de mesures DAX pour calculer des indicateurs clés de performance (KPI) pertinents pour chaque fonctionnalité.
     - Création de rapports interactifs et de tableaux de bord pour permettre aux utilisateurs de suivre les performances et les tendances dans chaque domaine de la gestion des ressources humaines.
+
+## Indications : 
+    - Fais les donnes de test en 2025 pour que les données soient à jour et pertinentes pour les analyses.
