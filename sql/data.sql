@@ -2122,3 +2122,893 @@ VALUES
 --  - 10 Formations planifiees T2 2025
 --  - 6 HeuresSup Mars 2025
 -- ============================================================
+
+-- ============================================================
+-- DONNEES SUPPLEMENTAIRES Q2 2025 - BASE RH MADAGASCAR
+-- Priorite PowerBI Dashboard : Paie, Presence, Performance,
+--   Conge, Absence, HeuresSup, Formation, Recrutement
+-- IMPORTANT : Ces donnees COMPLETENT le fichier data.sql existant
+--             sans modifier ni supprimer aucune donnee existante.
+-- Periode couverte : Avril, Mai, Juin 2025
+-- Paies id 46-90 | Bulletins 46-90 | Impots 46-90
+-- ============================================================
+
+-- ============================================================
+-- 1. PAIE AVRIL 2025 (id_paie 46 a 60)
+-- Legende : salaire_brut = salaire_base + heures_sup + primes
+--           total_deductions = CNaPS(1%) + OSTIE(1%) + IRSA
+--           salaire_net = salaire_brut - total_deductions
+-- ============================================================
+INSERT INTO Paie (id_employe, mois, annee, salaire_base, heures_sup_montant, primes,
+                  salaire_brut, total_deductions, salaire_net, date_paiement, statut)
+VALUES
+    (1,  4, 2025, 2500000,      0, 200000, 2700000,  432000, 2268000, '2025-04-30', 'Paye'),
+    (2,  4, 2025, 2800000,      0, 250000, 3050000,  518500, 2531500, '2025-04-30', 'Paye'),
+    (3,  4, 2025, 2600000,      0, 150000, 2750000,  440000, 2310000, '2025-04-30', 'Paye'),
+    (4,  4, 2025, 2400000,  41538, 130000, 2571538,  385731, 2185807, '2025-04-30', 'Paye'),
+    (5,  4, 2025, 2200000,      0, 100000, 2300000,  345000, 1955000, '2025-04-30', 'Paye'),
+    (6,  4, 2025, 2300000,      0, 120000, 2420000,  363000, 2057000, '2025-04-30', 'Paye'),
+    (7,  4, 2025, 1200000,  20769,  50000, 1270769,  152492, 1118277, '2025-04-30', 'Paye'),
+    (8,  4, 2025, 1500000,  43270,  80000, 1623270,  211825, 1411445, '2025-04-30', 'Paye'),
+    (9,  4, 2025, 700000,       0,  30000,  730000,   65700,  664300, '2025-04-30', 'Paye'),
+    (10, 4, 2025, 900000,       0,  40000,  940000,  103400,  836600, '2025-04-30', 'Paye'),
+    (11, 4, 2025, 700000,   24234,  60000,  784234,   70581,  713653, '2025-04-30', 'Paye'),
+    (12, 4, 2025, 650000,       0,      0,  650000,   52000,  598000, '2025-04-30', 'Paye'),
+    (13, 4, 2025, 1600000,  48462,  80000, 1728462,  233542, 1494920, '2025-04-30', 'Paye'),
+    (14, 4, 2025, 1400000,  36347,  60000, 1496347,  194525, 1301822, '2025-04-30', 'Paye'),
+    (15, 4, 2025, 650000,       0,  20000,  670000,   53600,  616400, '2025-04-30', 'Paye');
+
+-- ============================================================
+-- 2. PAIE MAI 2025 (id_paie 61 a 75)
+-- ============================================================
+INSERT INTO Paie (id_employe, mois, annee, salaire_base, heures_sup_montant, primes,
+                  salaire_brut, total_deductions, salaire_net, date_paiement, statut)
+VALUES
+    (1,  5, 2025, 2500000,      0, 200000, 2700000,  432000, 2268000, '2025-05-31', 'Paye'),
+    (2,  5, 2025, 2800000,      0, 250000, 3050000,  518500, 2531500, '2025-05-31', 'Paye'),
+    (3,  5, 2025, 2600000,      0, 150000, 2750000,  440000, 2310000, '2025-05-31', 'Paye'),
+    (4,  5, 2025, 2400000,      0, 120000, 2520000,  378000, 2142000, '2025-05-31', 'Paye'),
+    (5,  5, 2025, 2200000,      0, 100000, 2300000,  345000, 1955000, '2025-05-31', 'Paye'),
+    (6,  5, 2025, 2300000,      0, 120000, 2420000,  363000, 2057000, '2025-05-31', 'Paye'),
+    (7,  5, 2025, 1200000,  15577,  50000, 1265577,  151869, 1113708, '2025-05-31', 'Paye'),
+    (8,  5, 2025, 1500000,  25962,  80000, 1605962,  209515, 1396447, '2025-05-31', 'Paye'),
+    (9,  5, 2025, 700000,       0,  30000,  730000,   65700,  664300, '2025-05-31', 'Paye'),
+    (10, 5, 2025, 900000,       0,  50000,  950000,  104500,  845500, '2025-05-31', 'Paye'),
+    (11, 5, 2025, 700000,   24234,  70000,  794234,   71481,  722753, '2025-05-31', 'Paye'),
+    (12, 5, 2025, 650000,       0,  20000,  670000,   53600,  616400, '2025-05-31', 'Paye'),
+    (13, 5, 2025, 1600000,  41540,  80000, 1721540,  232208, 1489332, '2025-05-31', 'Paye'),
+    (14, 5, 2025, 1400000,  36347,  60000, 1496347,  194525, 1301822, '2025-05-31', 'Paye'),
+    (15, 5, 2025, 650000,       0,  20000,  670000,   53600,  616400, '2025-05-31', 'Paye');
+
+-- ============================================================
+-- 3. PAIE JUIN 2025 (id_paie 76 a 90)
+-- Juin = bilan semestriel : primes plus elevees
+-- ============================================================
+INSERT INTO Paie (id_employe, mois, annee, salaire_base, heures_sup_montant, primes,
+                  salaire_brut, total_deductions, salaire_net, date_paiement, statut)
+VALUES
+    (1,  6, 2025, 2500000,      0, 350000, 2850000,  456000, 2394000, '2025-06-30', 'Paye'),
+    (2,  6, 2025, 2800000,      0, 450000, 3250000,  552500, 2697500, '2025-06-30', 'Paye'),
+    (3,  6, 2025, 2600000,      0, 300000, 2900000,  464000, 2436000, '2025-06-30', 'Paye'),
+    (4,  6, 2025, 2400000,      0, 280000, 2680000,  401000, 2279000, '2025-06-30', 'Paye'),
+    (5,  6, 2025, 2200000,      0, 260000, 2460000,  369000, 2091000, '2025-06-30', 'Paye'),
+    (6,  6, 2025, 2300000,      0, 240000, 2540000,  381000, 2159000, '2025-06-30', 'Paye'),
+    (7,  6, 2025, 1200000,  20769, 100000, 1320769,  158492, 1162277, '2025-06-30', 'Paye'),
+    (8,  6, 2025, 1500000,  43270, 150000, 1693270,  220825, 1472445, '2025-06-30', 'Paye'),
+    (9,  6, 2025, 700000,       0,  60000,  760000,   68400,  691600, '2025-06-30', 'Paye'),
+    (10, 6, 2025, 900000,       0,  80000,  980000,  107800,  872200, '2025-06-30', 'Paye'),
+    (11, 6, 2025, 700000,   24234, 100000,  824234,   74181,  750053, '2025-06-30', 'Paye'),
+    (12, 6, 2025, 650000,       0,  50000,  700000,   56000,  644000, '2025-06-30', 'Paye'),
+    (13, 6, 2025, 1600000,  48462, 150000, 1798462,  242942, 1555520, '2025-06-30', 'Paye'),
+    (14, 6, 2025, 1400000,  36347, 120000, 1556347,  202325, 1354022, '2025-06-30', 'Paye'),
+    (15, 6, 2025, 650000,       0,  50000,  700000,   56000,  644000, '2025-06-30', 'Paye');
+
+-- ============================================================
+-- 4. IMPOTS ET DEDUCTIONS AVRIL 2025 (Paie id 46-60)
+-- ============================================================
+INSERT INTO ImpotDeduction (id_paie, type_deduction, description, montant, pourcentage, obligatoire)
+VALUES
+-- Employe 1 (Paie 46): Brut 2700000
+(46,'CNaPS','Cotisation CNaPS employe',27000,1.00,TRUE),
+(46,'OSTIE','Cotisation OSTIE employe',27000,1.00,TRUE),
+(46,'IRSA','Impot sur les revenus salariaux',378000,14.00,TRUE),
+-- Employe 2 (Paie 47): Brut 3050000
+(47,'CNaPS','Cotisation CNaPS employe',30500,1.00,TRUE),
+(47,'OSTIE','Cotisation OSTIE employe',30500,1.00,TRUE),
+(47,'IRSA','Impot sur les revenus salariaux',457500,15.00,TRUE),
+-- Employe 3 (Paie 48): Brut 2750000
+(48,'CNaPS','Cotisation CNaPS employe',27500,1.00,TRUE),
+(48,'OSTIE','Cotisation OSTIE employe',27500,1.00,TRUE),
+(48,'IRSA','Impot sur les revenus salariaux',385000,14.00,TRUE),
+-- Employe 4 (Paie 49): Brut 2571538
+(49,'CNaPS','Cotisation CNaPS employe',25715,1.00,TRUE),
+(49,'OSTIE','Cotisation OSTIE employe',25715,1.00,TRUE),
+(49,'IRSA','Impot sur les revenus salariaux',334301,13.00,TRUE),
+-- Employe 5 (Paie 50): Brut 2300000
+(50,'CNaPS','Cotisation CNaPS employe',23000,1.00,TRUE),
+(50,'OSTIE','Cotisation OSTIE employe',23000,1.00,TRUE),
+(50,'IRSA','Impot sur les revenus salariaux',299000,13.00,TRUE),
+-- Employe 6 (Paie 51): Brut 2420000
+(51,'CNaPS','Cotisation CNaPS employe',24200,1.00,TRUE),
+(51,'OSTIE','Cotisation OSTIE employe',24200,1.00,TRUE),
+(51,'IRSA','Impot sur les revenus salariaux',314600,13.00,TRUE),
+-- Employe 7 (Paie 52): Brut 1270769
+(52,'CNaPS','Cotisation CNaPS employe',12708,1.00,TRUE),
+(52,'OSTIE','Cotisation OSTIE employe',12708,1.00,TRUE),
+(52,'IRSA','Impot sur les revenus salariaux',127076,10.00,TRUE),
+-- Employe 8 (Paie 53): Brut 1623270
+(53,'CNaPS','Cotisation CNaPS employe',16233,1.00,TRUE),
+(53,'OSTIE','Cotisation OSTIE employe',16233,1.00,TRUE),
+(53,'IRSA','Impot sur les revenus salariaux',179359,11.00,TRUE),
+-- Employe 9 (Paie 54): Brut 730000
+(54,'CNaPS','Cotisation CNaPS employe',7300,1.00,TRUE),
+(54,'OSTIE','Cotisation OSTIE employe',7300,1.00,TRUE),
+(54,'IRSA','Impot sur les revenus salariaux',51100,7.00,TRUE),
+-- Employe 10 (Paie 55): Brut 940000
+(55,'CNaPS','Cotisation CNaPS employe',9400,1.00,TRUE),
+(55,'OSTIE','Cotisation OSTIE employe',9400,1.00,TRUE),
+(55,'IRSA','Impot sur les revenus salariaux',84600,9.00,TRUE),
+-- Employe 11 (Paie 56): Brut 784234
+(56,'CNaPS','Cotisation CNaPS employe',7842,1.00,TRUE),
+(56,'OSTIE','Cotisation OSTIE employe',7842,1.00,TRUE),
+(56,'IRSA','Impot sur les revenus salariaux',54897,7.00,TRUE),
+-- Employe 12 (Paie 57): Brut 650000
+(57,'CNaPS','Cotisation CNaPS employe',6500,1.00,TRUE),
+(57,'OSTIE','Cotisation OSTIE employe',6500,1.00,TRUE),
+(57,'IRSA','Impot sur les revenus salariaux',39000,6.00,TRUE),
+-- Employe 13 (Paie 58): Brut 1728462
+(58,'CNaPS','Cotisation CNaPS employe',17285,1.00,TRUE),
+(58,'OSTIE','Cotisation OSTIE employe',17285,1.00,TRUE),
+(58,'IRSA','Impot sur les revenus salariaux',198972,11.50,TRUE),
+-- Employe 14 (Paie 59): Brut 1496347
+(59,'CNaPS','Cotisation CNaPS employe',14963,1.00,TRUE),
+(59,'OSTIE','Cotisation OSTIE employe',14963,1.00,TRUE),
+(59,'IRSA','Impot sur les revenus salariaux',164599,11.00,TRUE),
+-- Employe 15 (Paie 60): Brut 670000
+(60,'CNaPS','Cotisation CNaPS employe',6700,1.00,TRUE),
+(60,'OSTIE','Cotisation OSTIE employe',6700,1.00,TRUE),
+(60,'IRSA','Impot sur les revenus salariaux',40200,6.00,TRUE);
+
+-- ============================================================
+-- 5. IMPOTS ET DEDUCTIONS MAI 2025 (Paie id 61-75)
+-- ============================================================
+INSERT INTO ImpotDeduction (id_paie, type_deduction, description, montant, pourcentage, obligatoire)
+VALUES
+    (61,'CNaPS','Cotisation CNaPS employe',27000,1.00,TRUE),
+    (61,'OSTIE','Cotisation OSTIE employe',27000,1.00,TRUE),
+    (61,'IRSA','Impot sur les revenus salariaux',378000,14.00,TRUE),
+    (62,'CNaPS','Cotisation CNaPS employe',30500,1.00,TRUE),
+    (62,'OSTIE','Cotisation OSTIE employe',30500,1.00,TRUE),
+    (62,'IRSA','Impot sur les revenus salariaux',457500,15.00,TRUE),
+    (63,'CNaPS','Cotisation CNaPS employe',27500,1.00,TRUE),
+    (63,'OSTIE','Cotisation OSTIE employe',27500,1.00,TRUE),
+    (63,'IRSA','Impot sur les revenus salariaux',385000,14.00,TRUE),
+    (64,'CNaPS','Cotisation CNaPS employe',25200,1.00,TRUE),
+    (64,'OSTIE','Cotisation OSTIE employe',25200,1.00,TRUE),
+    (64,'IRSA','Impot sur les revenus salariaux',327600,13.00,TRUE),
+    (65,'CNaPS','Cotisation CNaPS employe',23000,1.00,TRUE),
+    (65,'OSTIE','Cotisation OSTIE employe',23000,1.00,TRUE),
+    (65,'IRSA','Impot sur les revenus salariaux',299000,13.00,TRUE),
+    (66,'CNaPS','Cotisation CNaPS employe',24200,1.00,TRUE),
+    (66,'OSTIE','Cotisation OSTIE employe',24200,1.00,TRUE),
+    (66,'IRSA','Impot sur les revenus salariaux',314600,13.00,TRUE),
+    (67,'CNaPS','Cotisation CNaPS employe',12656,1.00,TRUE),
+    (67,'OSTIE','Cotisation OSTIE employe',12656,1.00,TRUE),
+    (67,'IRSA','Impot sur les revenus salariaux',126557,10.00,TRUE),
+    (68,'CNaPS','Cotisation CNaPS employe',16060,1.00,TRUE),
+    (68,'OSTIE','Cotisation OSTIE employe',16060,1.00,TRUE),
+    (68,'IRSA','Impot sur les revenus salariaux',177395,11.00,TRUE),
+    (69,'CNaPS','Cotisation CNaPS employe',7300,1.00,TRUE),
+    (69,'OSTIE','Cotisation OSTIE employe',7300,1.00,TRUE),
+    (69,'IRSA','Impot sur les revenus salariaux',51100,7.00,TRUE),
+    (70,'CNaPS','Cotisation CNaPS employe',9500,1.00,TRUE),
+    (70,'OSTIE','Cotisation OSTIE employe',9500,1.00,TRUE),
+    (70,'IRSA','Impot sur les revenus salariaux',85500,9.00,TRUE),
+    (71,'CNaPS','Cotisation CNaPS employe',7942,1.00,TRUE),
+    (71,'OSTIE','Cotisation OSTIE employe',7942,1.00,TRUE),
+    (71,'IRSA','Impot sur les revenus salariaux',55597,7.00,TRUE),
+    (72,'CNaPS','Cotisation CNaPS employe',6700,1.00,TRUE),
+    (72,'OSTIE','Cotisation OSTIE employe',6700,1.00,TRUE),
+    (72,'IRSA','Impot sur les revenus salariaux',40200,6.00,TRUE),
+    (73,'CNaPS','Cotisation CNaPS employe',17215,1.00,TRUE),
+    (73,'OSTIE','Cotisation OSTIE employe',17215,1.00,TRUE),
+    (73,'IRSA','Impot sur les revenus salariaux',197778,11.49,TRUE),
+    (74,'CNaPS','Cotisation CNaPS employe',14963,1.00,TRUE),
+    (74,'OSTIE','Cotisation OSTIE employe',14963,1.00,TRUE),
+    (74,'IRSA','Impot sur les revenus salariaux',164599,11.00,TRUE),
+    (75,'CNaPS','Cotisation CNaPS employe',6700,1.00,TRUE),
+    (75,'OSTIE','Cotisation OSTIE employe',6700,1.00,TRUE),
+    (75,'IRSA','Impot sur les revenus salariaux',40200,6.00,TRUE);
+
+-- ============================================================
+-- 6. IMPOTS ET DEDUCTIONS JUIN 2025 (Paie id 76-90)
+-- ============================================================
+INSERT INTO ImpotDeduction (id_paie, type_deduction, description, montant, pourcentage, obligatoire)
+VALUES
+    (76,'CNaPS','Cotisation CNaPS employe',28500,1.00,TRUE),
+    (76,'OSTIE','Cotisation OSTIE employe',28500,1.00,TRUE),
+    (76,'IRSA','Impot sur les revenus salariaux',399000,14.00,TRUE),
+    (77,'CNaPS','Cotisation CNaPS employe',32500,1.00,TRUE),
+    (77,'OSTIE','Cotisation OSTIE employe',32500,1.00,TRUE),
+    (77,'IRSA','Impot sur les revenus salariaux',487500,15.00,TRUE),
+    (78,'CNaPS','Cotisation CNaPS employe',29000,1.00,TRUE),
+    (78,'OSTIE','Cotisation OSTIE employe',29000,1.00,TRUE),
+    (78,'IRSA','Impot sur les revenus salariaux',406000,14.00,TRUE),
+    (79,'CNaPS','Cotisation CNaPS employe',26800,1.00,TRUE),
+    (79,'OSTIE','Cotisation OSTIE employe',26800,1.00,TRUE),
+    (79,'IRSA','Impot sur les revenus salariaux',347400,13.00,TRUE),
+    (80,'CNaPS','Cotisation CNaPS employe',24600,1.00,TRUE),
+    (80,'OSTIE','Cotisation OSTIE employe',24600,1.00,TRUE),
+    (80,'IRSA','Impot sur les revenus salariaux',319800,13.00,TRUE),
+    (81,'CNaPS','Cotisation CNaPS employe',25400,1.00,TRUE),
+    (81,'OSTIE','Cotisation OSTIE employe',25400,1.00,TRUE),
+    (81,'IRSA','Impot sur les revenus salariaux',330200,13.00,TRUE),
+    (82,'CNaPS','Cotisation CNaPS employe',13208,1.00,TRUE),
+    (82,'OSTIE','Cotisation OSTIE employe',13208,1.00,TRUE),
+    (82,'IRSA','Impot sur les revenus salariaux',132076,10.00,TRUE),
+    (83,'CNaPS','Cotisation CNaPS employe',16933,1.00,TRUE),
+    (83,'OSTIE','Cotisation OSTIE employe',16933,1.00,TRUE),
+    (83,'IRSA','Impot sur les revenus salariaux',186959,11.00,TRUE),
+    (84,'CNaPS','Cotisation CNaPS employe',7600,1.00,TRUE),
+    (84,'OSTIE','Cotisation OSTIE employe',7600,1.00,TRUE),
+    (84,'IRSA','Impot sur les revenus salariaux',53200,7.00,TRUE),
+    (85,'CNaPS','Cotisation CNaPS employe',9800,1.00,TRUE),
+    (85,'OSTIE','Cotisation OSTIE employe',9800,1.00,TRUE),
+    (85,'IRSA','Impot sur les revenus salariaux',88200,9.00,TRUE),
+    (86,'CNaPS','Cotisation CNaPS employe',8242,1.00,TRUE),
+    (86,'OSTIE','Cotisation OSTIE employe',8242,1.00,TRUE),
+    (86,'IRSA','Impot sur les revenus salariaux',57697,7.00,TRUE),
+    (87,'CNaPS','Cotisation CNaPS employe',7000,1.00,TRUE),
+    (87,'OSTIE','Cotisation OSTIE employe',7000,1.00,TRUE),
+    (87,'IRSA','Impot sur les revenus salariaux',42000,6.00,TRUE),
+    (88,'CNaPS','Cotisation CNaPS employe',17985,1.00,TRUE),
+    (88,'OSTIE','Cotisation OSTIE employe',17985,1.00,TRUE),
+    (88,'IRSA','Impot sur les revenus salariaux',206972,11.50,TRUE),
+    (89,'CNaPS','Cotisation CNaPS employe',15563,1.00,TRUE),
+    (89,'OSTIE','Cotisation OSTIE employe',15563,1.00,TRUE),
+    (89,'IRSA','Impot sur les revenus salariaux',171199,11.00,TRUE),
+    (90,'CNaPS','Cotisation CNaPS employe',7000,1.00,TRUE),
+    (90,'OSTIE','Cotisation OSTIE employe',7000,1.00,TRUE),
+    (90,'IRSA','Impot sur les revenus salariaux',42000,6.00,TRUE);
+
+-- ============================================================
+-- 7. BULLETINS DE PAIE AVRIL 2025 (id_paie 46-60)
+-- ============================================================
+INSERT INTO BulletinPaie (id_paie, numero_bulletin, date_emission, periode, details, signe_par, remis)
+VALUES
+    (46,'BP-2025-04-001','2025-04-30','Avril 2025','{"employe":{"nom":"RAKOTO","prenom":"Hery","matricule":"RH-001","poste":"Directeur RH"},"salaire_base":2500000,"heures_sup":0,"primes":200000,"brut":2700000,"deductions":[{"type":"CNaPS","montant":27000},{"type":"OSTIE","montant":27000},{"type":"IRSA","montant":378000}],"net":2268000}','Direction Generale',TRUE),
+    (47,'BP-2025-04-002','2025-04-30','Avril 2025','{"employe":{"nom":"ANDRIANARISOA","prenom":"Faly","matricule":"IT-001","poste":"Directeur IT"},"salaire_base":2800000,"heures_sup":0,"primes":250000,"brut":3050000,"deductions":[{"type":"CNaPS","montant":30500},{"type":"OSTIE","montant":30500},{"type":"IRSA","montant":457500}],"net":2531500}','Direction Generale',TRUE),
+    (48,'BP-2025-04-003','2025-04-30','Avril 2025','{"employe":{"nom":"RAZAFINDRAKOTO","prenom":"Miora","matricule":"FIN-001","poste":"Directrice Finance"},"salaire_base":2600000,"heures_sup":0,"primes":150000,"brut":2750000,"deductions":[{"type":"CNaPS","montant":27500},{"type":"OSTIE","montant":27500},{"type":"IRSA","montant":385000}],"net":2310000}','Direction Generale',TRUE),
+    (49,'BP-2025-04-004','2025-04-30','Avril 2025','{"employe":{"nom":"RAHERIMANDIMBY","prenom":"Tiana","matricule":"COM-001","poste":"Directeur Commercial"},"salaire_base":2400000,"heures_sup":41538,"primes":130000,"brut":2571538,"deductions":[{"type":"CNaPS","montant":25715},{"type":"OSTIE","montant":25715},{"type":"IRSA","montant":334301}],"net":2185807}','Direction Generale',TRUE),
+    (50,'BP-2025-04-005','2025-04-30','Avril 2025','{"employe":{"nom":"RANDRIANASOLO","prenom":"Vonjy","matricule":"LOG-001","poste":"Directeur Logistique"},"salaire_base":2200000,"heures_sup":0,"primes":100000,"brut":2300000,"deductions":[{"type":"CNaPS","montant":23000},{"type":"OSTIE","montant":23000},{"type":"IRSA","montant":299000}],"net":1955000}','Direction Generale',TRUE),
+    (51,'BP-2025-04-006','2025-04-30','Avril 2025','{"employe":{"nom":"RATSIMBAZAFY","prenom":"Lova","matricule":"MKT-001","poste":"Directrice Marketing"},"salaire_base":2300000,"heures_sup":0,"primes":120000,"brut":2420000,"deductions":[{"type":"CNaPS","montant":24200},{"type":"OSTIE","montant":24200},{"type":"IRSA","montant":314600}],"net":2057000}','Direction Generale',TRUE),
+    (52,'BP-2025-04-007','2025-04-30','Avril 2025','{"employe":{"nom":"RABEARIVELO","prenom":"Hasina","matricule":"IT-002","poste":"Developpeur Web"},"salaire_base":1200000,"heures_sup":20769,"primes":50000,"brut":1270769,"deductions":[{"type":"CNaPS","montant":12708},{"type":"OSTIE","montant":12708},{"type":"IRSA","montant":127076}],"net":1118277}','ANDRIANARISOA Faly',TRUE),
+    (53,'BP-2025-04-008','2025-04-30','Avril 2025','{"employe":{"nom":"ANDRIAMAHEFA","prenom":"Toky","matricule":"IT-003","poste":"Developpeur Senior"},"salaire_base":1500000,"heures_sup":43270,"primes":80000,"brut":1623270,"deductions":[{"type":"CNaPS","montant":16233},{"type":"OSTIE","montant":16233},{"type":"IRSA","montant":179359}],"net":1411445}','ANDRIANARISOA Faly',TRUE),
+    (54,'BP-2025-04-009','2025-04-30','Avril 2025','{"employe":{"nom":"RASOANAIVO","prenom":"Volatiana","matricule":"RH-002","poste":"Assistante RH"},"salaire_base":700000,"heures_sup":0,"primes":30000,"brut":730000,"deductions":[{"type":"CNaPS","montant":7300},{"type":"OSTIE","montant":7300},{"type":"IRSA","montant":51100}],"net":664300}','RAKOTO Hery',TRUE),
+    (55,'BP-2025-04-010','2025-04-30','Avril 2025','{"employe":{"nom":"RAZAFINDRABE","prenom":"Nomena","matricule":"FIN-002","poste":"Comptable"},"salaire_base":900000,"heures_sup":0,"primes":40000,"brut":940000,"deductions":[{"type":"CNaPS","montant":9400},{"type":"OSTIE","montant":9400},{"type":"IRSA","montant":84600}],"net":836600}','RAZAFINDRAKOTO Miora',TRUE),
+    (56,'BP-2025-04-011','2025-04-30','Avril 2025','{"employe":{"nom":"RAKOTONIRINA","prenom":"Ando","matricule":"COM-002","poste":"Commercial Terrain"},"salaire_base":700000,"heures_sup":24234,"primes":60000,"brut":784234,"deductions":[{"type":"CNaPS","montant":7842},{"type":"OSTIE","montant":7842},{"type":"IRSA","montant":54897}],"net":713653}','RAHERIMANDIMBY Tiana',TRUE),
+    (57,'BP-2025-04-012','2025-04-30','Avril 2025','{"employe":{"nom":"RAHERIMANANTSOA","prenom":"Fara","matricule":"COM-003","poste":"Commerciale Terrain"},"salaire_base":650000,"heures_sup":0,"primes":0,"brut":650000,"deductions":[{"type":"CNaPS","montant":6500},{"type":"OSTIE","montant":6500},{"type":"IRSA","montant":39000}],"net":598000}','RAHERIMANDIMBY Tiana',TRUE),
+    (58,'BP-2025-04-013','2025-04-30','Avril 2025','{"employe":{"nom":"RANDRIANARIVONY","prenom":"Lanto","matricule":"IT-004","poste":"Administrateur Systeme"},"salaire_base":1600000,"heures_sup":48462,"primes":80000,"brut":1728462,"deductions":[{"type":"CNaPS","montant":17285},{"type":"OSTIE","montant":17285},{"type":"IRSA","montant":198972}],"net":1494920}','ANDRIANARISOA Faly',TRUE),
+    (59,'BP-2025-04-014','2025-04-30','Avril 2025','{"employe":{"nom":"RAVALOMANANA","prenom":"Njaka","matricule":"LOG-002","poste":"Responsable Logistique"},"salaire_base":1400000,"heures_sup":36347,"primes":60000,"brut":1496347,"deductions":[{"type":"CNaPS","montant":14963},{"type":"OSTIE","montant":14963},{"type":"IRSA","montant":164599}],"net":1301822}','RANDRIANASOLO Vonjy',TRUE),
+    (60,'BP-2025-04-015','2025-04-30','Avril 2025','{"employe":{"nom":"ANDRIANJAFY","prenom":"Soa","matricule":"MKT-002","poste":"Community Manager"},"salaire_base":650000,"heures_sup":0,"primes":20000,"brut":670000,"deductions":[{"type":"CNaPS","montant":6700},{"type":"OSTIE","montant":6700},{"type":"IRSA","montant":40200}],"net":616400}','RATSIMBAZAFY Lova',TRUE);
+
+-- ============================================================
+-- 8. BULLETINS DE PAIE MAI 2025 (id_paie 61-75)
+-- ============================================================
+INSERT INTO BulletinPaie (id_paie, numero_bulletin, date_emission, periode, details, signe_par, remis)
+VALUES
+    (61,'BP-2025-05-001','2025-05-31','Mai 2025','{"employe":{"nom":"RAKOTO","prenom":"Hery","matricule":"RH-001","poste":"Directeur RH"},"salaire_base":2500000,"heures_sup":0,"primes":200000,"brut":2700000,"deductions":[{"type":"CNaPS","montant":27000},{"type":"OSTIE","montant":27000},{"type":"IRSA","montant":378000}],"net":2268000}','Direction Generale',TRUE),
+    (62,'BP-2025-05-002','2025-05-31','Mai 2025','{"employe":{"nom":"ANDRIANARISOA","prenom":"Faly","matricule":"IT-001","poste":"Directeur IT"},"salaire_base":2800000,"heures_sup":0,"primes":250000,"brut":3050000,"deductions":[{"type":"CNaPS","montant":30500},{"type":"OSTIE","montant":30500},{"type":"IRSA","montant":457500}],"net":2531500}','Direction Generale',TRUE),
+    (63,'BP-2025-05-003','2025-05-31','Mai 2025','{"employe":{"nom":"RAZAFINDRAKOTO","prenom":"Miora","matricule":"FIN-001","poste":"Directrice Finance"},"salaire_base":2600000,"heures_sup":0,"primes":150000,"brut":2750000,"deductions":[{"type":"CNaPS","montant":27500},{"type":"OSTIE","montant":27500},{"type":"IRSA","montant":385000}],"net":2310000}','Direction Generale',TRUE),
+    (64,'BP-2025-05-004','2025-05-31','Mai 2025','{"employe":{"nom":"RAHERIMANDIMBY","prenom":"Tiana","matricule":"COM-001","poste":"Directeur Commercial"},"salaire_base":2400000,"heures_sup":0,"primes":120000,"brut":2520000,"deductions":[{"type":"CNaPS","montant":25200},{"type":"OSTIE","montant":25200},{"type":"IRSA","montant":327600}],"net":2142000}','Direction Generale',TRUE),
+    (65,'BP-2025-05-005','2025-05-31','Mai 2025','{"employe":{"nom":"RANDRIANASOLO","prenom":"Vonjy","matricule":"LOG-001","poste":"Directeur Logistique"},"salaire_base":2200000,"heures_sup":0,"primes":100000,"brut":2300000,"deductions":[{"type":"CNaPS","montant":23000},{"type":"OSTIE","montant":23000},{"type":"IRSA","montant":299000}],"net":1955000}','Direction Generale',TRUE),
+    (66,'BP-2025-05-006','2025-05-31','Mai 2025','{"employe":{"nom":"RATSIMBAZAFY","prenom":"Lova","matricule":"MKT-001","poste":"Directrice Marketing"},"salaire_base":2300000,"heures_sup":0,"primes":120000,"brut":2420000,"deductions":[{"type":"CNaPS","montant":24200},{"type":"OSTIE","montant":24200},{"type":"IRSA","montant":314600}],"net":2057000}','Direction Generale',TRUE),
+    (67,'BP-2025-05-007','2025-05-31','Mai 2025','{"employe":{"nom":"RABEARIVELO","prenom":"Hasina","matricule":"IT-002","poste":"Developpeur Web"},"salaire_base":1200000,"heures_sup":15577,"primes":50000,"brut":1265577,"deductions":[{"type":"CNaPS","montant":12656},{"type":"OSTIE","montant":12656},{"type":"IRSA","montant":126557}],"net":1113708}','ANDRIANARISOA Faly',TRUE),
+    (68,'BP-2025-05-008','2025-05-31','Mai 2025','{"employe":{"nom":"ANDRIAMAHEFA","prenom":"Toky","matricule":"IT-003","poste":"Developpeur Senior"},"salaire_base":1500000,"heures_sup":25962,"primes":80000,"brut":1605962,"deductions":[{"type":"CNaPS","montant":16060},{"type":"OSTIE","montant":16060},{"type":"IRSA","montant":177395}],"net":1396447}','ANDRIANARISOA Faly',TRUE),
+    (69,'BP-2025-05-009','2025-05-31','Mai 2025','{"employe":{"nom":"RASOANAIVO","prenom":"Volatiana","matricule":"RH-002","poste":"Assistante RH"},"salaire_base":700000,"heures_sup":0,"primes":30000,"brut":730000,"deductions":[{"type":"CNaPS","montant":7300},{"type":"OSTIE","montant":7300},{"type":"IRSA","montant":51100}],"net":664300}','RAKOTO Hery',TRUE),
+    (70,'BP-2025-05-010','2025-05-31','Mai 2025','{"employe":{"nom":"RAZAFINDRABE","prenom":"Nomena","matricule":"FIN-002","poste":"Comptable"},"salaire_base":900000,"heures_sup":0,"primes":50000,"brut":950000,"deductions":[{"type":"CNaPS","montant":9500},{"type":"OSTIE","montant":9500},{"type":"IRSA","montant":85500}],"net":845500}','RAZAFINDRAKOTO Miora',TRUE),
+    (71,'BP-2025-05-011','2025-05-31','Mai 2025','{"employe":{"nom":"RAKOTONIRINA","prenom":"Ando","matricule":"COM-002","poste":"Commercial Terrain"},"salaire_base":700000,"heures_sup":24234,"primes":70000,"brut":794234,"deductions":[{"type":"CNaPS","montant":7942},{"type":"OSTIE","montant":7942},{"type":"IRSA","montant":55597}],"net":722753}','RAHERIMANDIMBY Tiana',TRUE),
+    (72,'BP-2025-05-012','2025-05-31','Mai 2025','{"employe":{"nom":"RAHERIMANANTSOA","prenom":"Fara","matricule":"COM-003","poste":"Commerciale Terrain"},"salaire_base":650000,"heures_sup":0,"primes":20000,"brut":670000,"deductions":[{"type":"CNaPS","montant":6700},{"type":"OSTIE","montant":6700},{"type":"IRSA","montant":40200}],"net":616400}','RAHERIMANDIMBY Tiana',TRUE),
+    (73,'BP-2025-05-013','2025-05-31','Mai 2025','{"employe":{"nom":"RANDRIANARIVONY","prenom":"Lanto","matricule":"IT-004","poste":"Administrateur Systeme"},"salaire_base":1600000,"heures_sup":41540,"primes":80000,"brut":1721540,"deductions":[{"type":"CNaPS","montant":17215},{"type":"OSTIE","montant":17215},{"type":"IRSA","montant":197778}],"net":1489332}','ANDRIANARISOA Faly',TRUE),
+    (74,'BP-2025-05-014','2025-05-31','Mai 2025','{"employe":{"nom":"RAVALOMANANA","prenom":"Njaka","matricule":"LOG-002","poste":"Responsable Logistique"},"salaire_base":1400000,"heures_sup":36347,"primes":60000,"brut":1496347,"deductions":[{"type":"CNaPS","montant":14963},{"type":"OSTIE","montant":14963},{"type":"IRSA","montant":164599}],"net":1301822}','RANDRIANASOLO Vonjy',TRUE),
+    (75,'BP-2025-05-015','2025-05-31','Mai 2025','{"employe":{"nom":"ANDRIANJAFY","prenom":"Soa","matricule":"MKT-002","poste":"Community Manager"},"salaire_base":650000,"heures_sup":0,"primes":20000,"brut":670000,"deductions":[{"type":"CNaPS","montant":6700},{"type":"OSTIE","montant":6700},{"type":"IRSA","montant":40200}],"net":616400}','RATSIMBAZAFY Lova',TRUE);
+
+-- ============================================================
+-- 9. BULLETINS DE PAIE JUIN 2025 (id_paie 76-90)
+-- ============================================================
+INSERT INTO BulletinPaie (id_paie, numero_bulletin, date_emission, periode, details, signe_par, remis)
+VALUES
+    (76,'BP-2025-06-001','2025-06-30','Juin 2025','{"employe":{"nom":"RAKOTO","prenom":"Hery","matricule":"RH-001","poste":"Directeur RH"},"salaire_base":2500000,"heures_sup":0,"primes":350000,"brut":2850000,"deductions":[{"type":"CNaPS","montant":28500},{"type":"OSTIE","montant":28500},{"type":"IRSA","montant":399000}],"net":2394000}','Direction Generale',TRUE),
+    (77,'BP-2025-06-002','2025-06-30','Juin 2025','{"employe":{"nom":"ANDRIANARISOA","prenom":"Faly","matricule":"IT-001","poste":"Directeur IT"},"salaire_base":2800000,"heures_sup":0,"primes":450000,"brut":3250000,"deductions":[{"type":"CNaPS","montant":32500},{"type":"OSTIE","montant":32500},{"type":"IRSA","montant":487500}],"net":2697500}','Direction Generale',TRUE),
+    (78,'BP-2025-06-003','2025-06-30','Juin 2025','{"employe":{"nom":"RAZAFINDRAKOTO","prenom":"Miora","matricule":"FIN-001","poste":"Directrice Finance"},"salaire_base":2600000,"heures_sup":0,"primes":300000,"brut":2900000,"deductions":[{"type":"CNaPS","montant":29000},{"type":"OSTIE","montant":29000},{"type":"IRSA","montant":406000}],"net":2436000}','Direction Generale',TRUE),
+    (79,'BP-2025-06-004','2025-06-30','Juin 2025','{"employe":{"nom":"RAHERIMANDIMBY","prenom":"Tiana","matricule":"COM-001","poste":"Directeur Commercial"},"salaire_base":2400000,"heures_sup":0,"primes":280000,"brut":2680000,"deductions":[{"type":"CNaPS","montant":26800},{"type":"OSTIE","montant":26800},{"type":"IRSA","montant":347400}],"net":2279000}','Direction Generale',TRUE),
+    (80,'BP-2025-06-005','2025-06-30','Juin 2025','{"employe":{"nom":"RANDRIANASOLO","prenom":"Vonjy","matricule":"LOG-001","poste":"Directeur Logistique"},"salaire_base":2200000,"heures_sup":0,"primes":260000,"brut":2460000,"deductions":[{"type":"CNaPS","montant":24600},{"type":"OSTIE","montant":24600},{"type":"IRSA","montant":319800}],"net":2091000}','Direction Generale',TRUE),
+    (81,'BP-2025-06-006','2025-06-30','Juin 2025','{"employe":{"nom":"RATSIMBAZAFY","prenom":"Lova","matricule":"MKT-001","poste":"Directrice Marketing"},"salaire_base":2300000,"heures_sup":0,"primes":240000,"brut":2540000,"deductions":[{"type":"CNaPS","montant":25400},{"type":"OSTIE","montant":25400},{"type":"IRSA","montant":330200}],"net":2159000}','Direction Generale',TRUE),
+    (82,'BP-2025-06-007','2025-06-30','Juin 2025','{"employe":{"nom":"RABEARIVELO","prenom":"Hasina","matricule":"IT-002","poste":"Developpeur Web"},"salaire_base":1200000,"heures_sup":20769,"primes":100000,"brut":1320769,"deductions":[{"type":"CNaPS","montant":13208},{"type":"OSTIE","montant":13208},{"type":"IRSA","montant":132076}],"net":1162277}','ANDRIANARISOA Faly',TRUE),
+    (83,'BP-2025-06-008','2025-06-30','Juin 2025','{"employe":{"nom":"ANDRIAMAHEFA","prenom":"Toky","matricule":"IT-003","poste":"Developpeur Senior"},"salaire_base":1500000,"heures_sup":43270,"primes":150000,"brut":1693270,"deductions":[{"type":"CNaPS","montant":16933},{"type":"OSTIE","montant":16933},{"type":"IRSA","montant":186959}],"net":1472445}','ANDRIANARISOA Faly',TRUE),
+    (84,'BP-2025-06-009','2025-06-30','Juin 2025','{"employe":{"nom":"RASOANAIVO","prenom":"Volatiana","matricule":"RH-002","poste":"Assistante RH"},"salaire_base":700000,"heures_sup":0,"primes":60000,"brut":760000,"deductions":[{"type":"CNaPS","montant":7600},{"type":"OSTIE","montant":7600},{"type":"IRSA","montant":53200}],"net":691600}','RAKOTO Hery',TRUE),
+    (85,'BP-2025-06-010','2025-06-30','Juin 2025','{"employe":{"nom":"RAZAFINDRABE","prenom":"Nomena","matricule":"FIN-002","poste":"Comptable"},"salaire_base":900000,"heures_sup":0,"primes":80000,"brut":980000,"deductions":[{"type":"CNaPS","montant":9800},{"type":"OSTIE","montant":9800},{"type":"IRSA","montant":88200}],"net":872200}','RAZAFINDRAKOTO Miora',TRUE),
+    (86,'BP-2025-06-011','2025-06-30','Juin 2025','{"employe":{"nom":"RAKOTONIRINA","prenom":"Ando","matricule":"COM-002","poste":"Commercial Terrain"},"salaire_base":700000,"heures_sup":24234,"primes":100000,"brut":824234,"deductions":[{"type":"CNaPS","montant":8242},{"type":"OSTIE","montant":8242},{"type":"IRSA","montant":57697}],"net":750053}','RAHERIMANDIMBY Tiana',TRUE),
+    (87,'BP-2025-06-012','2025-06-30','Juin 2025','{"employe":{"nom":"RAHERIMANANTSOA","prenom":"Fara","matricule":"COM-003","poste":"Commerciale Terrain"},"salaire_base":650000,"heures_sup":0,"primes":50000,"brut":700000,"deductions":[{"type":"CNaPS","montant":7000},{"type":"OSTIE","montant":7000},{"type":"IRSA","montant":42000}],"net":644000}','RAHERIMANDIMBY Tiana',TRUE),
+    (88,'BP-2025-06-013','2025-06-30','Juin 2025','{"employe":{"nom":"RANDRIANARIVONY","prenom":"Lanto","matricule":"IT-004","poste":"Administrateur Systeme"},"salaire_base":1600000,"heures_sup":48462,"primes":150000,"brut":1798462,"deductions":[{"type":"CNaPS","montant":17985},{"type":"OSTIE","montant":17985},{"type":"IRSA","montant":206972}],"net":1555520}','ANDRIANARISOA Faly',TRUE),
+    (89,'BP-2025-06-014','2025-06-30','Juin 2025','{"employe":{"nom":"RAVALOMANANA","prenom":"Njaka","matricule":"LOG-002","poste":"Responsable Logistique"},"salaire_base":1400000,"heures_sup":36347,"primes":120000,"brut":1556347,"deductions":[{"type":"CNaPS","montant":15563},{"type":"OSTIE","montant":15563},{"type":"IRSA","montant":171199}],"net":1354022}','RANDRIANASOLO Vonjy',TRUE),
+    (90,'BP-2025-06-015','2025-06-30','Juin 2025','{"employe":{"nom":"ANDRIANJAFY","prenom":"Soa","matricule":"MKT-002","poste":"Community Manager"},"salaire_base":650000,"heures_sup":0,"primes":50000,"brut":700000,"deductions":[{"type":"CNaPS","montant":7000},{"type":"OSTIE","montant":7000},{"type":"IRSA","montant":42000}],"net":644000}','RATSIMBAZAFY Lova',TRUE);
+
+-- ============================================================
+-- 10. PRESENCES AVRIL 2025
+--     Jours ouvrables : 1,2,3,4,7,8,9,10,11,14,15,16,17,18,
+--                       22,23,24,25,28,29,30 Avril
+--     (exclure 21 Avril = ferie hypothetique)
+-- ============================================================
+INSERT INTO Presence (id_employe, date_presence, heure_arrivee, heure_depart, heures_travaillees, statut, commentaire)
+VALUES
+-- 1 Avril
+(1,'2025-04-01','08:00','17:00',8.00,'Present',NULL),
+(2,'2025-04-01','07:52','17:08',8.00,'Present',NULL),
+(3,'2025-04-01','08:00','17:00',8.00,'Present',NULL),
+(4,'2025-04-01','08:00','17:00',8.00,'Present',NULL),
+(5,'2025-04-01','08:00','17:00',8.00,'Present',NULL),
+(6,'2025-04-01','08:00','17:00',8.00,'Present',NULL),
+(7,'2025-04-01','09:00','18:00',8.00,'Present',NULL),
+(8,'2025-04-01','09:00','18:00',8.00,'Present',NULL),
+(9,'2025-04-01','08:00','17:00',8.00,'Present',NULL),
+(10,'2025-04-01','08:00','17:00',8.00,'Present',NULL),
+(11,'2025-04-01','08:00','17:00',8.00,'Present',NULL),
+(12,'2025-04-01','08:00','17:00',8.00,'Present',NULL),
+(13,'2025-04-01','09:00','18:00',8.00,'Present',NULL),
+(14,'2025-04-01','07:00','16:00',8.00,'Present',NULL),
+(15,'2025-04-01','09:00','18:00',8.00,'Present',NULL),
+-- 2 Avril
+(1,'2025-04-02','08:00','17:00',8.00,'Present',NULL),
+(2,'2025-04-02','07:55','17:05',8.00,'Present',NULL),
+(3,'2025-04-02','08:00','17:00',8.00,'Present',NULL),
+(4,'2025-04-02','08:00','17:30',8.50,'Present','Reunion client prolongee'),
+(5,'2025-04-02','08:00','17:00',8.00,'Present',NULL),
+(6,'2025-04-02','08:00','17:00',8.00,'Present',NULL),
+(7,'2025-04-02','09:05','18:00',7.75,'Retard','Retard 5 min'),
+(8,'2025-04-02','09:00','19:00',9.00,'Present','Deploiement feature critique'),
+(9,'2025-04-02','08:00','17:00',8.00,'Present',NULL),
+(10,'2025-04-02','08:00','17:00',8.00,'Present',NULL),
+(11,'2025-04-02','08:00','17:00',8.00,'Present',NULL),
+(12,'2025-04-02','08:20','17:00',7.50,'Retard','Retard 20 min'),
+(13,'2025-04-02','09:00','18:00',8.00,'Present',NULL),
+(14,'2025-04-02','07:00','16:00',8.00,'Present',NULL),
+(15,'2025-04-02','09:00','18:00',8.00,'Present',NULL),
+-- 3 Avril
+(1,'2025-04-03','08:00','17:00',8.00,'Present',NULL),
+(2,'2025-04-03','07:50','17:10',8.00,'Present',NULL),
+(3,'2025-04-03','08:00','17:00',8.00,'Present',NULL),
+(4,'2025-04-03','08:00','17:00',8.00,'Present',NULL),
+(5,'2025-04-03','08:00','17:00',8.00,'Present',NULL),
+(6,'2025-04-03','08:00','17:00',8.00,'Present',NULL),
+(7,'2025-04-03','09:00','18:00',8.00,'Present',NULL),
+(8,'2025-04-03','09:00','18:00',8.00,'Present',NULL),
+(9,'2025-04-03','08:00','17:00',8.00,'Present',NULL),
+(10,'2025-04-03','08:00','17:00',8.00,'Present',NULL),
+(11,'2025-04-03','08:00','17:00',8.00,'Present',NULL),
+(12,'2025-04-03','08:00','17:00',8.00,'Present',NULL),
+(13,'2025-04-03','09:00','18:00',8.00,'Present',NULL),
+(14,'2025-04-03','07:05','16:00',8.00,'Present',NULL),
+(15,'2025-04-03','09:00','18:00',8.00,'Present',NULL),
+-- 4 Avril
+(1,'2025-04-04','08:00','17:00',8.00,'Present',NULL),
+(2,'2025-04-04','07:55','17:05',8.00,'Present',NULL),
+(3,'2025-04-04','08:00','17:00',8.00,'Present',NULL),
+(4,'2025-04-04','08:00','17:00',8.00,'Present',NULL),
+(5,'2025-04-04','08:00','17:00',8.00,'Present',NULL),
+(6,'2025-04-04','08:00','17:00',8.00,'Present',NULL),
+(7,'2025-04-04','09:00','18:00',8.00,'Present',NULL),
+(8,'2025-04-04','09:00','18:00',8.00,'Present',NULL),
+(9,'2025-04-04','08:10','17:00',7.75,'Retard','Retard 10 min'),
+(10,'2025-04-04','08:00','17:00',8.00,'Present',NULL),
+(11,'2025-04-04','08:00','17:00',8.00,'Present',NULL),
+(12,'2025-04-04','08:00','17:00',8.00,'Present',NULL),
+(13,'2025-04-04','09:00','18:00',8.00,'Present',NULL),
+(14,'2025-04-04','07:00','16:00',8.00,'Present',NULL),
+(15,'2025-04-04','09:15','18:00',7.75,'Retard','Embouteillage'),
+-- 7 Avril
+(1,'2025-04-07',NULL,NULL,0,'Conge','Conge annuel'),
+(2,'2025-04-07','07:55','17:05',8.00,'Present',NULL),
+(3,'2025-04-07','08:00','17:00',8.00,'Present',NULL),
+(4,'2025-04-07','08:00','17:00',8.00,'Present',NULL),
+(5,'2025-04-07','08:00','17:00',8.00,'Present',NULL),
+(6,'2025-04-07','08:00','17:00',8.00,'Present',NULL),
+(7,'2025-04-07',NULL,NULL,0,'Conge','Conge annuel Paques'),
+(8,'2025-04-07','09:00','18:00',8.00,'Present',NULL),
+(9,'2025-04-07','08:00','17:00',8.00,'Present',NULL),
+(10,'2025-04-07','08:00','17:00',8.00,'Present',NULL),
+(11,'2025-04-07','08:00','17:00',8.00,'Present',NULL),
+(12,'2025-04-07','08:00','17:00',8.00,'Present',NULL),
+(13,'2025-04-07','09:00','18:00',8.00,'Present',NULL),
+(14,'2025-04-07','07:00','16:00',8.00,'Present',NULL),
+(15,'2025-04-07','09:00','18:00',8.00,'Present',NULL),
+-- 8 Avril
+(1,'2025-04-08',NULL,NULL,0,'Conge','Conge annuel'),
+(2,'2025-04-08','07:52','17:08',8.00,'Present',NULL),
+(3,'2025-04-08','08:00','17:00',8.00,'Present',NULL),
+(4,'2025-04-08','08:00','17:00',8.00,'Present',NULL),
+(5,'2025-04-08','08:00','17:00',8.00,'Present',NULL),
+(6,'2025-04-08','08:00','17:00',8.00,'Present',NULL),
+(7,'2025-04-08',NULL,NULL,0,'Conge','Conge annuel Paques'),
+(8,'2025-04-08','09:00','18:30',8.50,'Present','Sprint release'),
+(9,'2025-04-08','08:00','17:00',8.00,'Present',NULL),
+(10,'2025-04-08','08:00','17:00',8.00,'Present',NULL),
+(11,'2025-04-08','08:00','17:00',8.00,'Present',NULL),
+(12,'2025-04-08',NULL,NULL,0,'Absent','Absence injustifiee'),
+(13,'2025-04-08','09:00','18:00',8.00,'Present',NULL),
+(14,'2025-04-08','07:00','16:00',8.00,'Present',NULL),
+(15,'2025-04-08','09:00','18:00',8.00,'Present',NULL),
+-- 9 Avril
+(1,'2025-04-09','08:00','17:00',8.00,'Present',NULL),
+(2,'2025-04-09','07:50','17:10',8.00,'Present',NULL),
+(3,'2025-04-09','08:00','17:00',8.00,'Present',NULL),
+(4,'2025-04-09','08:00','17:00',8.00,'Present',NULL),
+(5,'2025-04-09','08:00','17:00',8.00,'Present',NULL),
+(6,'2025-04-09','08:00','17:00',8.00,'Present',NULL),
+(7,'2025-04-09','09:00','18:00',8.00,'Present',NULL),
+(8,'2025-04-09','09:00','18:00',8.00,'Present',NULL),
+(9,'2025-04-09','08:00','17:00',8.00,'Present',NULL),
+(10,'2025-04-09','08:00','17:00',8.00,'Present',NULL),
+(11,'2025-04-09','08:00','17:00',8.00,'Present',NULL),
+(12,'2025-04-09','08:00','17:00',8.00,'Present',NULL),
+(13,'2025-04-09','09:00','18:00',8.00,'Present',NULL),
+(14,'2025-04-09','07:00','16:00',8.00,'Present',NULL),
+(15,'2025-04-09','09:00','18:00',8.00,'Present',NULL),
+-- 10 Avril
+(1,'2025-04-10','08:00','17:00',8.00,'Present',NULL),
+(2,'2025-04-10','08:00','17:00',8.00,'Present',NULL),
+(3,'2025-04-10','08:00','17:00',8.00,'Present',NULL),
+(4,'2025-04-10','08:00','17:00',8.00,'Present',NULL),
+(5,'2025-04-10','08:00','17:00',8.00,'Present',NULL),
+(6,'2025-04-10','08:05','17:00',7.92,'Present',NULL),
+(7,'2025-04-10','09:00','18:00',8.00,'Present',NULL),
+(8,'2025-04-10','09:00','19:00',9.00,'Present','Heures sup deploiement'),
+(9,'2025-04-10','08:00','17:00',8.00,'Present',NULL),
+(10,'2025-04-10','08:00','17:00',8.00,'Present',NULL),
+(11,'2025-04-10','08:00','17:00',8.00,'Present',NULL),
+(12,'2025-04-10','08:00','17:00',8.00,'Present',NULL),
+(13,'2025-04-10','09:00','18:00',8.00,'Present',NULL),
+(14,'2025-04-10','07:05','16:00',8.00,'Present',NULL),
+(15,'2025-04-10','09:00','18:00',8.00,'Present',NULL),
+-- 11 Avril
+(1,'2025-04-11','08:00','17:00',8.00,'Present',NULL),
+(2,'2025-04-11','07:55','17:05',8.00,'Present',NULL),
+(3,'2025-04-11','08:00','17:00',8.00,'Present',NULL),
+(4,'2025-04-11','08:00','17:30',8.50,'Present','Negociation client'),
+(5,'2025-04-11','08:00','17:00',8.00,'Present',NULL),
+(6,'2025-04-11','08:00','17:00',8.00,'Present',NULL),
+(7,'2025-04-11','09:00','18:00',8.00,'Present',NULL),
+(8,'2025-04-11','09:00','18:00',8.00,'Present',NULL),
+(9,'2025-04-11','08:00','17:00',8.00,'Present',NULL),
+(10,'2025-04-11','08:00','17:00',8.00,'Present',NULL),
+(11,'2025-04-11','08:00','17:00',8.00,'Present',NULL),
+(12,'2025-04-11','08:00','17:00',8.00,'Present',NULL),
+(13,'2025-04-11','09:00','18:00',8.00,'Present',NULL),
+(14,'2025-04-11','07:00','16:00',8.00,'Present',NULL),
+(15,'2025-04-11','09:00','18:00',8.00,'Present',NULL),
+-- 14 Avril
+(1,'2025-04-14',NULL,NULL,0,'Conge','Conge annuel'),
+(2,'2025-04-14','07:55','17:05',8.00,'Present',NULL),
+(3,'2025-04-14',NULL,NULL,0,'Conge','Conge planifie'),
+(4,'2025-04-14','08:00','17:00',8.00,'Present',NULL),
+(5,'2025-04-14','08:00','17:00',8.00,'Present',NULL),
+(6,'2025-04-14','08:00','17:00',8.00,'Present',NULL),
+(7,'2025-04-14','09:00','18:00',8.00,'Present',NULL),
+(8,'2025-04-14','09:00','18:00',8.00,'Present',NULL),
+(9,'2025-04-14','08:00','17:00',8.00,'Present',NULL),
+(10,'2025-04-14','08:00','17:00',8.00,'Present',NULL),
+(11,'2025-04-14','08:00','17:00',8.00,'Present',NULL),
+(12,'2025-04-14','08:00','17:00',8.00,'Present',NULL),
+(13,'2025-04-14','09:00','18:00',8.00,'Present',NULL),
+(14,'2025-04-14','07:00','16:00',8.00,'Present',NULL),
+(15,'2025-04-14','09:00','18:00',8.00,'Present',NULL),
+-- 15 Avril
+(1,'2025-04-15','08:00','17:00',8.00,'Present',NULL),
+(2,'2025-04-15','07:52','17:08',8.00,'Present',NULL),
+(3,'2025-04-15','08:00','17:00',8.00,'Present',NULL),
+(4,'2025-04-15','08:00','17:00',8.00,'Present',NULL),
+(5,'2025-04-15','08:00','17:00',8.00,'Present',NULL),
+(6,'2025-04-15','08:00','17:00',8.00,'Present',NULL),
+(7,'2025-04-15','09:20','18:00',7.50,'Retard','Embouteillage Ivandry'),
+(8,'2025-04-15','09:00','18:00',8.00,'Present',NULL),
+(9,'2025-04-15','08:00','17:00',8.00,'Present',NULL),
+(10,'2025-04-15','08:00','17:00',8.00,'Present',NULL),
+(11,'2025-04-15','08:00','17:00',8.00,'Present',NULL),
+(12,'2025-04-15','08:15','17:00',7.75,'Retard','Retard 15 min'),
+(13,'2025-04-15','09:00','18:00',8.00,'Present',NULL),
+(14,'2025-04-15','07:00','16:00',8.00,'Present',NULL),
+(15,'2025-04-15','09:00','18:00',8.00,'Present',NULL),
+-- 16 Avril
+(1,'2025-04-16','08:00','17:00',8.00,'Present',NULL),
+(2,'2025-04-16','07:55','17:05',8.00,'Present',NULL),
+(3,'2025-04-16','08:00','17:00',8.00,'Present',NULL),
+(4,'2025-04-16','08:00','17:00',8.00,'Present',NULL),
+(5,'2025-04-16','08:00','17:00',8.00,'Present',NULL),
+(6,'2025-04-16','08:00','17:00',8.00,'Present',NULL),
+(7,'2025-04-16','09:00','18:00',8.00,'Present',NULL),
+(8,'2025-04-16','09:00','18:00',8.00,'Present',NULL),
+(9,'2025-04-16','08:00','17:00',8.00,'Present',NULL),
+(10,'2025-04-16','08:00','17:00',8.00,'Present',NULL),
+(11,'2025-04-16','08:00','17:00',8.00,'Present',NULL),
+(12,'2025-04-16','08:00','17:00',8.00,'Present',NULL),
+(13,'2025-04-16','09:00','18:00',8.00,'Present',NULL),
+(14,'2025-04-16','07:00','16:00',8.00,'Present',NULL),
+(15,'2025-04-16','09:00','18:00',8.00,'Present',NULL),
+-- 17 Avril
+(1,'2025-04-17','08:00','17:00',8.00,'Present',NULL),
+(2,'2025-04-17','07:50','17:10',8.00,'Present',NULL),
+(3,'2025-04-17','08:00','17:00',8.00,'Present',NULL),
+(4,'2025-04-17','08:00','17:00',8.00,'Present',NULL),
+(5,'2025-04-17','08:00','17:00',8.00,'Present',NULL),
+(6,'2025-04-17','08:00','17:00',8.00,'Present',NULL),
+(7,'2025-04-17','09:00','18:00',8.00,'Present',NULL),
+(8,'2025-04-17','09:00','18:00',8.00,'Present',NULL),
+(9,'2025-04-17','08:00','17:00',8.00,'Present',NULL),
+(10,'2025-04-17','08:05','17:00',7.92,'Present',NULL),
+(11,'2025-04-17','08:00','17:00',8.00,'Present',NULL),
+(12,'2025-04-17','08:00','17:00',8.00,'Present',NULL),
+(13,'2025-04-17','09:00','18:00',8.00,'Present',NULL),
+(14,'2025-04-17','07:00','16:00',8.00,'Present',NULL),
+(15,'2025-04-17','09:00','18:00',8.00,'Present',NULL),
+-- 18 Avril
+(1,'2025-04-18','08:00','17:00',8.00,'Present',NULL),
+(2,'2025-04-18','07:55','17:05',8.00,'Present',NULL),
+(3,'2025-04-18','08:00','17:00',8.00,'Present',NULL),
+(4,'2025-04-18','08:00','17:00',8.00,'Present',NULL),
+(5,'2025-04-18','08:00','17:00',8.00,'Present',NULL),
+(6,'2025-04-18','08:00','17:00',8.00,'Present',NULL),
+(7,'2025-04-18','09:00','18:30',8.50,'Present','Finition sprint'),
+(8,'2025-04-18','09:00','18:00',8.00,'Present',NULL),
+(9,'2025-04-18','08:00','17:00',8.00,'Present',NULL),
+(10,'2025-04-18','08:00','17:00',8.00,'Present',NULL),
+(11,'2025-04-18','08:00','17:00',8.00,'Present',NULL),
+(12,'2025-04-18','08:00','17:00',8.00,'Present',NULL),
+(13,'2025-04-18','09:00','18:00',8.00,'Present',NULL),
+(14,'2025-04-18','07:00','16:00',8.00,'Present',NULL),
+(15,'2025-04-18','09:00','18:00',8.00,'Present',NULL),
+-- 22 Avril
+(1,'2025-04-22','08:00','17:00',8.00,'Present',NULL),
+(2,'2025-04-22','07:52','17:08',8.00,'Present',NULL),
+(3,'2025-04-22','08:00','17:00',8.00,'Present',NULL),
+(4,'2025-04-22','08:00','17:00',8.00,'Present',NULL),
+(5,'2025-04-22','08:00','17:00',8.00,'Present',NULL),
+(6,'2025-04-22','08:00','17:00',8.00,'Present',NULL),
+(7,'2025-04-22','09:00','18:00',8.00,'Present',NULL),
+(8,'2025-04-22','09:00','18:00',8.00,'Present',NULL),
+(9,'2025-04-22','08:00','17:00',8.00,'Present',NULL),
+(10,'2025-04-22','08:00','17:00',8.00,'Present',NULL),
+(11,'2025-04-22','08:00','17:00',8.00,'Present',NULL),
+(12,'2025-04-22',NULL,NULL,0,'Absent','Absence injustifiee'),
+(13,'2025-04-22','09:00','18:00',8.00,'Present',NULL),
+(14,'2025-04-22','07:00','16:00',8.00,'Present',NULL),
+(15,'2025-04-22','09:00','18:00',8.00,'Present',NULL),
+-- 23 Avril
+(1,'2025-04-23','08:00','17:00',8.00,'Present',NULL),
+(2,'2025-04-23','07:55','17:05',8.00,'Present',NULL),
+(3,'2025-04-23','08:00','17:00',8.00,'Present',NULL),
+(4,'2025-04-23','08:00','17:00',8.00,'Present',NULL),
+(5,'2025-04-23','08:00','17:00',8.00,'Present',NULL),
+(6,'2025-04-23','08:00','17:00',8.00,'Present',NULL),
+(7,'2025-04-23','09:10','18:00',7.75,'Retard','Panne vehicule'),
+(8,'2025-04-23','09:00','18:00',8.00,'Present',NULL),
+(9,'2025-04-23','08:00','17:00',8.00,'Present',NULL),
+(10,'2025-04-23','08:00','17:00',8.00,'Present',NULL),
+(11,'2025-04-23','08:00','17:00',8.00,'Present',NULL),
+(12,'2025-04-23','08:00','17:00',8.00,'Present',NULL),
+(13,'2025-04-23','09:00','18:00',8.00,'Present',NULL),
+(14,'2025-04-23','07:00','16:00',8.00,'Present',NULL),
+(15,'2025-04-23','09:00','18:00',8.00,'Present',NULL),
+-- 24 Avril
+(1,'2025-04-24','08:00','17:00',8.00,'Present',NULL),
+(2,'2025-04-24','07:55','17:05',8.00,'Present',NULL),
+(3,'2025-04-24','08:00','17:00',8.00,'Present',NULL),
+(4,'2025-04-24','08:00','17:00',8.00,'Present',NULL),
+(5,'2025-04-24','08:00','17:00',8.00,'Present',NULL),
+(6,'2025-04-24','08:00','17:00',8.00,'Present',NULL),
+(7,'2025-04-24','09:00','18:00',8.00,'Present',NULL),
+(8,'2025-04-24','09:00','18:00',8.00,'Present',NULL),
+(9,'2025-04-24','08:00','17:00',8.00,'Present',NULL),
+(10,'2025-04-24','08:00','17:00',8.00,'Present',NULL),
+(11,'2025-04-24','08:00','17:00',8.00,'Present',NULL),
+(12,'2025-04-24','08:00','17:00',8.00,'Present',NULL),
+(13,'2025-04-24','09:00','18:00',8.00,'Present',NULL),
+(14,'2025-04-24','07:00','16:00',8.00,'Present',NULL),
+(15,'2025-04-24','09:05','18:00',7.92,'Present',NULL),
+-- 25 Avril
+(1,'2025-04-25','08:00','17:00',8.00,'Present',NULL),
+(2,'2025-04-25','07:50','17:10',8.00,'Present',NULL),
+(3,'2025-04-25','08:00','17:00',8.00,'Present',NULL),
+(4,'2025-04-25','08:00','17:00',8.00,'Present',NULL),
+(5,'2025-04-25',NULL,NULL,0,'Conge','Conge annuel'),
+(6,'2025-04-25','08:00','17:00',8.00,'Present',NULL),
+(7,'2025-04-25','09:00','18:00',8.00,'Present',NULL),
+(8,'2025-04-25','09:00','18:00',8.00,'Present',NULL),
+(9,'2025-04-25','08:00','17:00',8.00,'Present',NULL),
+(10,'2025-04-25','08:00','17:00',8.00,'Present',NULL),
+(11,'2025-04-25','08:00','17:00',8.00,'Present',NULL),
+(12,'2025-04-25','08:00','17:00',8.00,'Present',NULL),
+(13,'2025-04-25','09:00','18:00',8.00,'Present',NULL),
+(14,'2025-04-25','07:00','16:00',8.00,'Present',NULL),
+(15,'2025-04-25','09:00','18:00',8.00,'Present',NULL),
+-- 28 Avril
+(1,'2025-04-28','08:00','17:00',8.00,'Present',NULL),
+(2,'2025-04-28','07:55','17:05',8.00,'Present',NULL),
+(3,'2025-04-28','08:00','17:00',8.00,'Present',NULL),
+(4,'2025-04-28','08:00','17:00',8.00,'Present',NULL),
+(5,'2025-04-28',NULL,NULL,0,'Conge','Conge annuel'),
+(6,'2025-04-28','08:00','17:00',8.00,'Present',NULL),
+(7,'2025-04-28','09:00','18:00',8.00,'Present',NULL),
+(8,'2025-04-28','09:00','18:00',8.00,'Present',NULL),
+(9,'2025-04-28','08:00','17:00',8.00,'Present',NULL),
+(10,'2025-04-28','08:15','17:00',7.75,'Retard','Route bloquee'),
+(11,'2025-04-28','08:00','17:00',8.00,'Present',NULL),
+(12,'2025-04-28','08:00','17:00',8.00,'Present',NULL),
+(13,'2025-04-28','09:00','18:00',8.00,'Present',NULL),
+(14,'2025-04-28','07:00','16:00',8.00,'Present',NULL),
+(15,'2025-04-28','09:00','18:00',8.00,'Present',NULL),
+-- 29 Avril
+(1,'2025-04-29','08:00','17:00',8.00,'Present',NULL),
+(2,'2025-04-29','07:52','17:08',8.00,'Present',NULL),
+(3,'2025-04-29','08:00','17:00',8.00,'Present',NULL),
+(4,'2025-04-29','08:00','17:30',8.50,'Present','Reunion fin de mois'),
+(5,'2025-04-29',NULL,NULL,0,'Conge','Conge annuel'),
+(6,'2025-04-29','08:00','17:00',8.00,'Present',NULL),
+(7,'2025-04-29','09:00','18:00',8.00,'Present',NULL),
+(8,'2025-04-29','09:00','18:00',8.00,'Present',NULL),
+(9,'2025-04-29','08:00','17:00',8.00,'Present',NULL),
+(10,'2025-04-29','08:00','17:00',8.00,'Present',NULL),
+(11,'2025-04-29','08:00','17:00',8.00,'Present',NULL),
+(12,'2025-04-29','08:00','17:00',8.00,'Present',NULL),
+(13,'2025-04-29','09:00','18:00',8.00,'Present',NULL),
+(14,'2025-04-29','07:00','16:00',8.00,'Present',NULL),
+(15,'2025-04-29','09:00','18:00',8.00,'Present',NULL),
+-- 30 Avril
+(1,'2025-04-30','08:00','17:00',8.00,'Present',NULL),
+(2,'2025-04-30','07:55','17:05',8.00,'Present',NULL),
+(3,'2025-04-30','08:00','17:00',8.00,'Present',NULL),
+(4,'2025-04-30','08:00','17:00',8.00,'Present',NULL),
+(5,'2025-04-30',NULL,NULL,0,'Conge','Conge annuel'),
+(6,'2025-04-30','08:00','17:00',8.00,'Present',NULL),
+(7,'2025-04-30','09:00','18:00',8.00,'Present',NULL),
+(8,'2025-04-30','09:00','19:00',9.00,'Present','Cloture sprint mensuel'),
+(9,'2025-04-30','08:00','17:00',8.00,'Present',NULL),
+(10,'2025-04-30','08:00','17:00',8.00,'Present',NULL),
+(11,'2025-04-30','08:00','17:00',8.00,'Present',NULL),
+(12,'2025-04-30','08:00','17:00',8.00,'Present',NULL),
+(13,'2025-04-30','09:00','18:00',8.00,'Present',NULL),
+(14,'2025-04-30','07:00','16:00',8.00,'Present',NULL),
+(15,'2025-04-30','09:00','18:00',8.00,'Present',NULL);
+
+-- ============================================================
+-- 11. PRESENCES MAI 2025
+--     Jours ouvrables : 2,5,6,7,8,9,12,13,14,15,16,
+--                       19,20,21,22,23,26,27,28,29,30 Mai
+-- ============================================================
+INSERT INTO Presence (id_employe, date_presence, heure_arrivee, heure_depart, heures_travaillees, statut, commentaire)
+VALUES
+-- 2 Mai
+(1,'2025-05-02','08:00','17:00',8.00,'Present',NULL),(2,'2025-05-02','07:55','17:05',8.00,'Present',NULL),(3,'2025-05-02','08:00','17:00',8.00,'Present',NULL),(4,'2025-05-02','08:00','17:00',8.00,'Present',NULL),(5,'2025-05-02','08:00','17:00',8.00,'Present',NULL),(6,'2025-05-02','08:00','17:00',8.00,'Present',NULL),(7,'2025-05-02','09:00','18:00',8.00,'Present',NULL),(8,'2025-05-02','09:00','18:00',8.00,'Present',NULL),(9,'2025-05-02','08:00','17:00',8.00,'Present',NULL),(10,'2025-05-02','08:00','17:00',8.00,'Present',NULL),(11,'2025-05-02','08:00','17:00',8.00,'Present',NULL),(12,'2025-05-02','08:10','17:00',7.75,'Retard','Retard 10 min'),(13,'2025-05-02','09:00','18:00',8.00,'Present',NULL),(14,'2025-05-02','07:00','16:00',8.00,'Present',NULL),(15,'2025-05-02','09:00','18:00',8.00,'Present',NULL),
+-- 5 Mai
+(1,'2025-05-05','08:00','17:00',8.00,'Present',NULL),(2,'2025-05-05','07:50','17:10',8.00,'Present',NULL),(3,'2025-05-05','08:00','17:00',8.00,'Present',NULL),(4,'2025-05-05','08:00','17:00',8.00,'Present',NULL),(5,'2025-05-05','08:00','17:00',8.00,'Present',NULL),(6,'2025-05-05','08:00','17:00',8.00,'Present',NULL),(7,'2025-05-05','09:00','18:00',8.00,'Present','Debut formation TypeScript'),(8,'2025-05-05','09:00','18:00',8.00,'Present',NULL),(9,'2025-05-05','08:00','17:00',8.00,'Present',NULL),(10,'2025-05-05','08:00','17:00',8.00,'Present',NULL),(11,'2025-05-05','08:00','17:00',8.00,'Present',NULL),(12,'2025-05-05','08:00','17:00',8.00,'Present',NULL),(13,'2025-05-05','09:00','18:00',8.00,'Present',NULL),(14,'2025-05-05','07:00','16:00',8.00,'Present',NULL),(15,'2025-05-05','09:00','18:00',8.00,'Present',NULL),
+-- 6 Mai
+(1,'2025-05-06','08:00','17:00',8.00,'Present',NULL),(2,'2025-05-06','07:55','17:05',8.00,'Present',NULL),(3,'2025-05-06','08:00','17:00',8.00,'Present',NULL),(4,'2025-05-06','08:00','17:00',8.00,'Present',NULL),(5,'2025-05-06','08:00','17:00',8.00,'Present',NULL),(6,'2025-05-06','08:00','17:00',8.00,'Present',NULL),(7,'2025-05-06',NULL,NULL,0,'Formation','Formation TypeScript externe'),(8,'2025-05-06','09:00','18:00',8.00,'Present',NULL),(9,'2025-05-06','08:00','17:00',8.00,'Present',NULL),(10,'2025-05-06','08:00','17:00',8.00,'Present',NULL),(11,'2025-05-06','08:00','17:00',8.00,'Present',NULL),(12,'2025-05-06','08:00','17:00',8.00,'Present',NULL),(13,'2025-05-06','09:00','18:00',8.00,'Present',NULL),(14,'2025-05-06','07:00','16:00',8.00,'Present',NULL),(15,'2025-05-06','09:05','18:00',7.92,'Present',NULL),
+-- 7 Mai
+(1,'2025-05-07','08:00','17:00',8.00,'Present',NULL),(2,'2025-05-07','07:52','17:08',8.00,'Present',NULL),(3,'2025-05-07','08:00','17:00',8.00,'Present',NULL),(4,'2025-05-07','08:00','17:00',8.00,'Present',NULL),(5,'2025-05-07','08:00','17:00',8.00,'Present',NULL),(6,'2025-05-07','08:00','17:00',8.00,'Present',NULL),(7,'2025-05-07',NULL,NULL,0,'Formation','Formation TypeScript externe'),(8,'2025-05-07','09:00','18:00',8.00,'Present',NULL),(9,'2025-05-07','08:00','17:00',8.00,'Present',NULL),(10,'2025-05-07','08:00','17:00',8.00,'Present',NULL),(11,'2025-05-07','08:00','17:00',8.00,'Present',NULL),(12,'2025-05-07',NULL,NULL,0,'Absent','Absence injustifiee'),(13,'2025-05-07','09:00','18:00',8.00,'Present',NULL),(14,'2025-05-07','07:00','16:00',8.00,'Present',NULL),(15,'2025-05-07','09:00','18:00',8.00,'Present',NULL),
+-- 8 Mai
+(1,'2025-05-08','08:00','17:00',8.00,'Present',NULL),(2,'2025-05-08','07:55','17:05',8.00,'Present',NULL),(3,'2025-05-08','08:00','17:00',8.00,'Present',NULL),(4,'2025-05-08','08:00','17:00',8.00,'Present',NULL),(5,'2025-05-08','08:00','17:00',8.00,'Present',NULL),(6,'2025-05-08','08:00','17:00',8.00,'Present',NULL),(7,'2025-05-08',NULL,NULL,0,'Formation','Formation TypeScript externe'),(8,'2025-05-08','09:00','18:30',8.50,'Present','Sprint demo client'),(9,'2025-05-08','08:00','17:00',8.00,'Present',NULL),(10,'2025-05-08','08:00','17:00',8.00,'Present',NULL),(11,'2025-05-08','08:00','17:00',8.00,'Present',NULL),(12,'2025-05-08','08:00','17:00',8.00,'Present',NULL),(13,'2025-05-08','09:00','18:00',8.00,'Present',NULL),(14,'2025-05-08','07:00','16:00',8.00,'Present',NULL),(15,'2025-05-08','09:00','18:00',8.00,'Present',NULL),
+-- 9 Mai
+(1,'2025-05-09','08:00','17:00',8.00,'Present',NULL),(2,'2025-05-09','07:50','17:10',8.00,'Present',NULL),(3,'2025-05-09','08:00','17:00',8.00,'Present',NULL),(4,'2025-05-09','08:00','17:00',8.00,'Present',NULL),(5,'2025-05-09','08:00','17:00',8.00,'Present',NULL),(6,'2025-05-09','08:00','17:00',8.00,'Present',NULL),(7,'2025-05-09',NULL,NULL,0,'Formation','Dernier jour formation TypeScript'),(8,'2025-05-09','09:00','18:00',8.00,'Present',NULL),(9,'2025-05-09','08:00','17:00',8.00,'Present',NULL),(10,'2025-05-09','08:00','17:00',8.00,'Present',NULL),(11,'2025-05-09','08:00','17:00',8.00,'Present',NULL),(12,'2025-05-09','08:00','17:00',8.00,'Present',NULL),(13,'2025-05-09','09:00','18:00',8.00,'Present',NULL),(14,'2025-05-09','07:00','16:00',8.00,'Present',NULL),(15,'2025-05-09','09:00','18:00',8.00,'Present',NULL),
+-- 12 Mai
+(1,'2025-05-12','08:00','17:00',8.00,'Present',NULL),(2,'2025-05-12','07:55','17:05',8.00,'Present',NULL),(3,'2025-05-12','08:00','17:00',8.00,'Present',NULL),(4,'2025-05-12','08:00','17:00',8.00,'Present',NULL),(5,'2025-05-12','08:00','17:00',8.00,'Present',NULL),(6,'2025-05-12','08:00','17:00',8.00,'Present',NULL),(7,'2025-05-12','09:00','18:00',8.00,'Present',NULL),(8,'2025-05-12','09:00','18:00',8.00,'Present',NULL),(9,'2025-05-12',NULL,NULL,0,'Formation','Formation Excel RH'),(10,'2025-05-12','08:00','17:00',8.00,'Present',NULL),(11,'2025-05-12','08:00','17:00',8.00,'Present',NULL),(12,'2025-05-12','08:20','17:00',7.50,'Retard','Retard 20 min'),(13,'2025-05-12','09:00','18:00',8.00,'Present',NULL),(14,'2025-05-12','07:00','16:00',8.00,'Present',NULL),(15,'2025-05-12','09:00','18:00',8.00,'Present',NULL),
+-- 13 Mai
+(1,'2025-05-13','08:00','17:00',8.00,'Present',NULL),(2,'2025-05-13','07:52','17:08',8.00,'Present',NULL),(3,'2025-05-13','08:00','17:00',8.00,'Present',NULL),(4,'2025-05-13','08:00','17:00',8.00,'Present',NULL),(5,'2025-05-13','08:00','17:00',8.00,'Present',NULL),(6,'2025-05-13','08:00','17:00',8.00,'Present',NULL),(7,'2025-05-13','09:00','18:00',8.00,'Present',NULL),(8,'2025-05-13','09:00','18:00',8.00,'Present',NULL),(9,'2025-05-13',NULL,NULL,0,'Formation','Formation Excel RH'),(10,'2025-05-13','08:00','17:00',8.00,'Present',NULL),(11,'2025-05-13','08:00','17:00',8.00,'Present',NULL),(12,'2025-05-13','08:00','17:00',8.00,'Present',NULL),(13,'2025-05-13','09:00','18:00',8.00,'Present',NULL),(14,'2025-05-13','07:00','16:00',8.00,'Present',NULL),(15,'2025-05-13','09:00','18:00',8.00,'Present',NULL),
+-- 14 Mai
+(1,'2025-05-14','08:00','17:00',8.00,'Present',NULL),(2,'2025-05-14','07:55','17:05',8.00,'Present',NULL),(3,'2025-05-14','08:00','17:00',8.00,'Present',NULL),(4,'2025-05-14','08:00','17:00',8.00,'Present',NULL),(5,'2025-05-14','08:00','17:00',8.00,'Present',NULL),(6,'2025-05-14','08:00','17:00',8.00,'Present',NULL),(7,'2025-05-14','09:00','18:00',8.00,'Present',NULL),(8,'2025-05-14','09:00','18:00',8.00,'Present',NULL),(9,'2025-05-14',NULL,NULL,0,'Formation','Dernier jour formation Excel RH'),(10,'2025-05-14','08:00','17:00',8.00,'Present',NULL),(11,'2025-05-14','08:00','17:00',8.00,'Present',NULL),(12,'2025-05-14','08:00','17:00',8.00,'Present',NULL),(13,'2025-05-14','09:00','18:00',8.00,'Present',NULL),(14,'2025-05-14','07:00','16:00',8.00,'Present',NULL),(15,'2025-05-14','09:00','18:00',8.00,'Present',NULL),
+-- 15 Mai
+(1,'2025-05-15','08:00','17:00',8.00,'Present',NULL),(2,'2025-05-15','07:50','17:10',8.00,'Present',NULL),(3,'2025-05-15','08:00','17:00',8.00,'Present',NULL),(4,'2025-05-15','08:00','17:30',8.50,'Present','Reunion equipe commerciale'),(5,'2025-05-15','08:00','17:00',8.00,'Present',NULL),(6,'2025-05-15','08:00','17:00',8.00,'Present',NULL),(7,'2025-05-15','09:00','18:00',8.00,'Present',NULL),(8,'2025-05-15','09:00','18:00',8.00,'Present',NULL),(9,'2025-05-15','08:00','17:00',8.00,'Present',NULL),(10,'2025-05-15','08:15','17:00',7.75,'Retard','Embouteillage'),(11,'2025-05-15','08:00','17:00',8.00,'Present',NULL),(12,'2025-05-15','08:00','17:00',8.00,'Present',NULL),(13,'2025-05-15','09:00','18:00',8.00,'Present',NULL),(14,'2025-05-15','07:00','16:00',8.00,'Present',NULL),(15,'2025-05-15','09:00','18:00',8.00,'Present',NULL),
+-- 16 Mai
+(1,'2025-05-16','08:00','17:00',8.00,'Present',NULL),(2,'2025-05-16','07:55','17:05',8.00,'Present',NULL),(3,'2025-05-16','08:00','17:00',8.00,'Present',NULL),(4,'2025-05-16','08:00','17:00',8.00,'Present',NULL),(5,'2025-05-16','08:00','17:00',8.00,'Present',NULL),(6,'2025-05-16','08:00','17:00',8.00,'Present',NULL),(7,'2025-05-16','09:00','18:00',8.00,'Present',NULL),(8,'2025-05-16','09:00','18:00',8.00,'Present',NULL),(9,'2025-05-16','08:00','17:00',8.00,'Present',NULL),(10,'2025-05-16','08:00','17:00',8.00,'Present',NULL),(11,'2025-05-16','08:00','17:00',8.00,'Present',NULL),(12,'2025-05-16','08:00','17:00',8.00,'Present',NULL),(13,'2025-05-16','09:00','18:00',8.00,'Present',NULL),(14,'2025-05-16','07:00','16:00',8.00,'Present',NULL),(15,'2025-05-16','09:00','18:00',8.00,'Present',NULL),
+-- 19 Mai
+(1,'2025-05-19','08:00','17:00',8.00,'Present',NULL),(2,'2025-05-19','07:52','17:08',8.00,'Present',NULL),(3,'2025-05-19','08:00','17:00',8.00,'Present',NULL),(4,'2025-05-19','08:00','17:00',8.00,'Present',NULL),(5,'2025-05-19','08:00','17:00',8.00,'Present',NULL),(6,'2025-05-19','08:00','17:00',8.00,'Present',NULL),(7,'2025-05-19','09:00','18:00',8.00,'Present',NULL),(8,'2025-05-19','09:00','18:00',8.00,'Present',NULL),(9,'2025-05-19','08:00','17:00',8.00,'Present',NULL),(10,'2025-05-19','08:00','17:00',8.00,'Present',NULL),(11,'2025-05-19','08:00','17:00',8.00,'Present',NULL),(12,'2025-05-19','08:00','17:00',8.00,'Present',NULL),(13,'2025-05-19','09:00','18:00',8.00,'Present',NULL),(14,'2025-05-19',NULL,NULL,0,'Formation','Formation Gestion Projet Logistique'),(15,'2025-05-19','09:00','18:00',8.00,'Present',NULL),
+-- 20 Mai
+(1,'2025-05-20','08:00','17:00',8.00,'Present',NULL),(2,'2025-05-20','07:55','17:05',8.00,'Present',NULL),(3,'2025-05-20','08:00','17:00',8.00,'Present',NULL),(4,'2025-05-20','08:00','17:00',8.00,'Present',NULL),(5,'2025-05-20','08:00','17:00',8.00,'Present',NULL),(6,'2025-05-20','08:00','17:00',8.00,'Present',NULL),(7,'2025-05-20','09:00','18:00',8.00,'Present',NULL),(8,'2025-05-20','09:00','18:30',8.50,'Present','Bug critique resolu'),(9,'2025-05-20','08:00','17:00',8.00,'Present',NULL),(10,'2025-05-20','08:00','17:00',8.00,'Present',NULL),(11,'2025-05-20','08:00','17:00',8.00,'Present',NULL),(12,'2025-05-20','08:00','17:00',8.00,'Present',NULL),(13,'2025-05-20','09:00','18:00',8.00,'Present',NULL),(14,'2025-05-20',NULL,NULL,0,'Formation','Formation Gestion Projet Logistique'),(15,'2025-05-20','09:00','18:00',8.00,'Present',NULL),
+-- 21 Mai
+(1,'2025-05-21','08:00','17:00',8.00,'Present',NULL),(2,'2025-05-21','07:50','17:10',8.00,'Present',NULL),(3,'2025-05-21','08:00','17:00',8.00,'Present',NULL),(4,'2025-05-21','08:00','17:00',8.00,'Present',NULL),(5,'2025-05-21','08:00','17:00',8.00,'Present',NULL),(6,'2025-05-21','08:00','17:00',8.00,'Present',NULL),(7,'2025-05-21','09:15','18:00',7.75,'Retard','Embouteillage matin'),(8,'2025-05-21','09:00','18:00',8.00,'Present',NULL),(9,'2025-05-21','08:00','17:00',8.00,'Present',NULL),(10,'2025-05-21','08:00','17:00',8.00,'Present',NULL),(11,'2025-05-21','08:00','17:00',8.00,'Present',NULL),(12,'2025-05-21','08:00','17:00',8.00,'Present',NULL),(13,'2025-05-21','09:00','18:00',8.00,'Present',NULL),(14,'2025-05-21',NULL,NULL,0,'Formation','Formation Gestion Projet Logistique'),(15,'2025-05-21','09:00','18:00',8.00,'Present',NULL),
+-- 22 Mai
+(1,'2025-05-22','08:00','17:00',8.00,'Present',NULL),(2,'2025-05-22','07:55','17:05',8.00,'Present',NULL),(3,'2025-05-22','08:00','17:00',8.00,'Present',NULL),(4,'2025-05-22','08:00','17:00',8.00,'Present',NULL),(5,'2025-05-22','08:00','17:00',8.00,'Present',NULL),(6,'2025-05-22','08:00','17:00',8.00,'Present',NULL),(7,'2025-05-22','09:00','18:00',8.00,'Present',NULL),(8,'2025-05-22','09:00','18:00',8.00,'Present',NULL),(9,'2025-05-22','08:00','17:00',8.00,'Present',NULL),(10,'2025-05-22','08:00','17:00',8.00,'Present',NULL),(11,'2025-05-22','08:00','17:00',8.00,'Present',NULL),(12,'2025-05-22','08:00','17:00',8.00,'Present',NULL),(13,'2025-05-22','09:00','18:00',8.00,'Present',NULL),(14,'2025-05-22',NULL,NULL,0,'Formation','Formation Gestion Projet Logistique'),(15,'2025-05-22','09:00','18:00',8.00,'Present',NULL),
+-- 23 Mai
+(1,'2025-05-23','08:00','17:00',8.00,'Present',NULL),(2,'2025-05-23','07:52','17:08',8.00,'Present',NULL),(3,'2025-05-23','08:00','17:00',8.00,'Present',NULL),(4,'2025-05-23','08:00','17:00',8.00,'Present',NULL),(5,'2025-05-23','08:00','17:00',8.00,'Present',NULL),(6,'2025-05-23','08:00','17:00',8.00,'Present',NULL),(7,'2025-05-23','09:00','18:00',8.00,'Present',NULL),(8,'2025-05-23','09:00','18:00',8.00,'Present',NULL),(9,'2025-05-23','08:00','17:00',8.00,'Present',NULL),(10,'2025-05-23','08:00','17:00',8.00,'Present',NULL),(11,'2025-05-23','08:00','17:00',8.00,'Present',NULL),(12,'2025-05-23','08:00','17:00',8.00,'Present',NULL),(13,'2025-05-23','09:00','18:00',8.00,'Present',NULL),(14,'2025-05-23',NULL,NULL,0,'Formation','Dernier jour formation Logistique'),(15,'2025-05-23','09:00','18:00',8.00,'Present',NULL),
+-- 26 Mai
+(1,'2025-05-26','08:00','17:00',8.00,'Present',NULL),(2,'2025-05-26','07:55','17:05',8.00,'Present',NULL),(3,'2025-05-26','08:00','17:00',8.00,'Present',NULL),(4,'2025-05-26','08:00','17:00',8.00,'Present',NULL),(5,'2025-05-26','08:00','17:00',8.00,'Present',NULL),(6,'2025-05-26','08:00','17:00',8.00,'Present',NULL),(7,'2025-05-26','09:00','18:00',8.00,'Present',NULL),(8,'2025-05-26','09:00','18:00',8.00,'Present',NULL),(9,'2025-05-26','08:00','17:00',8.00,'Present',NULL),(10,'2025-05-26','08:00','17:00',8.00,'Present',NULL),(11,'2025-05-26','08:00','17:00',8.00,'Present',NULL),(12,'2025-05-26','08:00','17:00',8.00,'Present',NULL),(13,'2025-05-26','09:00','18:00',8.00,'Present',NULL),(14,'2025-05-26','07:00','16:00',8.00,'Present',NULL),(15,'2025-05-26','09:00','18:00',8.00,'Present',NULL),
+-- 27 Mai
+(1,'2025-05-27','08:00','17:00',8.00,'Present',NULL),(2,'2025-05-27','07:50','17:10',8.00,'Present',NULL),(3,'2025-05-27','08:00','17:00',8.00,'Present',NULL),(4,'2025-05-27','08:00','17:00',8.00,'Present',NULL),(5,'2025-05-27','08:00','17:00',8.00,'Present',NULL),(6,'2025-05-27','08:00','17:00',8.00,'Present',NULL),(7,'2025-05-27','09:00','18:00',8.00,'Present',NULL),(8,'2025-05-27','09:00','18:00',8.00,'Present',NULL),(9,'2025-05-27','08:10','17:00',7.75,'Retard','Retard 10 min'),(10,'2025-05-27','08:00','17:00',8.00,'Present',NULL),(11,'2025-05-27','08:00','17:00',8.00,'Present',NULL),(12,'2025-05-27','08:00','17:00',8.00,'Present',NULL),(13,'2025-05-27','09:00','18:00',8.00,'Present',NULL),(14,'2025-05-27','07:00','16:00',8.00,'Present',NULL),(15,'2025-05-27','09:00','18:00',8.00,'Present',NULL),
+-- 28 Mai
+(1,'2025-05-28','08:00','17:00',8.00,'Present',NULL),(2,'2025-05-28','07:55','17:05',8.00,'Present',NULL),(3,'2025-05-28','08:00','17:00',8.00,'Present',NULL),(4,'2025-05-28','08:00','17:00',8.00,'Present',NULL),(5,'2025-05-28','08:00','17:00',8.00,'Present',NULL),(6,'2025-05-28','08:00','17:00',8.00,'Present',NULL),(7,'2025-05-28','09:00','18:00',8.00,'Present',NULL),(8,'2025-05-28','09:00','18:00',8.00,'Present',NULL),(9,'2025-05-28','08:00','17:00',8.00,'Present',NULL),(10,'2025-05-28','08:00','17:00',8.00,'Present',NULL),(11,'2025-05-28','08:00','17:00',8.00,'Present',NULL),(12,'2025-05-28',NULL,NULL,0,'Absent','Absence injustifiee'),(13,'2025-05-28','09:00','18:00',8.00,'Present',NULL),(14,'2025-05-28','07:00','16:00',8.00,'Present',NULL),(15,'2025-05-28','09:00','18:00',8.00,'Present',NULL),
+-- 29 Mai
+(1,'2025-05-29','08:00','17:00',8.00,'Present',NULL),(2,'2025-05-29','07:52','17:08',8.00,'Present',NULL),(3,'2025-05-29','08:00','17:00',8.00,'Present',NULL),(4,'2025-05-29','08:00','17:00',8.00,'Present',NULL),(5,'2025-05-29','08:00','17:00',8.00,'Present',NULL),(6,'2025-05-29','08:00','17:00',8.00,'Present',NULL),(7,'2025-05-29','09:00','18:00',8.00,'Present',NULL),(8,'2025-05-29','09:00','18:00',8.00,'Present',NULL),(9,'2025-05-29','08:00','17:00',8.00,'Present',NULL),(10,'2025-05-29','08:00','17:00',8.00,'Present',NULL),(11,'2025-05-29','08:00','17:00',8.00,'Present',NULL),(12,'2025-05-29','08:00','17:00',8.00,'Present',NULL),(13,'2025-05-29','09:00','18:00',8.00,'Present',NULL),(14,'2025-05-29','07:00','16:00',8.00,'Present',NULL),(15,'2025-05-29','09:00','18:00',8.00,'Present',NULL),
+-- 30 Mai
+(1,'2025-05-30','08:00','17:00',8.00,'Present',NULL),(2,'2025-05-30','07:55','17:05',8.00,'Present',NULL),(3,'2025-05-30','08:00','17:00',8.00,'Present',NULL),(4,'2025-05-30','08:00','17:30',8.50,'Present','Bilan mensuel commercial'),(5,'2025-05-30','08:00','17:00',8.00,'Present',NULL),(6,'2025-05-30','08:00','17:00',8.00,'Present',NULL),(7,'2025-05-30','09:00','18:00',8.00,'Present',NULL),(8,'2025-05-30','09:00','19:00',9.00,'Present','Cloture sprint Mai'),(9,'2025-05-30','08:00','17:00',8.00,'Present',NULL),(10,'2025-05-30','08:00','17:00',8.00,'Present',NULL),(11,'2025-05-30','08:00','17:00',8.00,'Present',NULL),(12,'2025-05-30','08:00','17:00',8.00,'Present',NULL),(13,'2025-05-30','09:00','18:00',8.00,'Present',NULL),(14,'2025-05-30','07:00','16:00',8.00,'Present',NULL),(15,'2025-05-30','09:00','18:00',8.00,'Present',NULL);
+
+-- ============================================================
+-- 12. PRESENCES JUIN 2025
+--     Jours ouvrables : 2,3,4,5,6,9,10,11,12,13,
+--                       16,17,18,19,20,23,24,25,26,27,30 Juin
+-- ============================================================
+INSERT INTO Presence (id_employe, date_presence, heure_arrivee, heure_depart, heures_travaillees, statut, commentaire)
+VALUES
+-- 2 Juin
+(1,'2025-06-02','08:00','17:00',8.00,'Present',NULL),(2,'2025-06-02','07:55','17:05',8.00,'Present',NULL),(3,'2025-06-02','08:00','17:00',8.00,'Present',NULL),(4,'2025-06-02','08:00','17:00',8.00,'Present',NULL),(5,'2025-06-02','08:00','17:00',8.00,'Present',NULL),(6,'2025-06-02','08:00','17:00',8.00,'Present',NULL),(7,'2025-06-02','09:00','18:00',8.00,'Present',NULL),(8,'2025-06-02','09:00','18:00',8.00,'Present',NULL),(9,'2025-06-02','08:00','17:00',8.00,'Present',NULL),(10,'2025-06-02','08:00','17:00',8.00,'Present',NULL),(11,'2025-06-02','08:00','17:00',8.00,'Present',NULL),(12,'2025-06-02','08:00','17:00',8.00,'Present',NULL),(13,'2025-06-02','09:00','18:00',8.00,'Present',NULL),(14,'2025-06-02','07:00','16:00',8.00,'Present',NULL),(15,'2025-06-02',NULL,NULL,0,'Formation','Debut formation Motion Design'),
+-- 3 Juin
+(1,'2025-06-03','08:00','17:00',8.00,'Present',NULL),(2,'2025-06-03','07:52','17:08',8.00,'Present',NULL),(3,'2025-06-03','08:00','17:00',8.00,'Present',NULL),(4,'2025-06-03','08:00','17:00',8.00,'Present',NULL),(5,'2025-06-03','08:00','17:00',8.00,'Present',NULL),(6,'2025-06-03','08:00','17:00',8.00,'Present',NULL),(7,'2025-06-03','09:00','18:00',8.00,'Present',NULL),(8,'2025-06-03','09:00','18:00',8.00,'Present',NULL),(9,'2025-06-03','08:00','17:00',8.00,'Present',NULL),(10,'2025-06-03','08:00','17:00',8.00,'Present',NULL),(11,'2025-06-03','08:00','17:00',8.00,'Present',NULL),(12,'2025-06-03','08:15','17:00',7.75,'Retard','Retard 15 min'),(13,'2025-06-03','09:00','18:00',8.00,'Present',NULL),(14,'2025-06-03','07:00','16:00',8.00,'Present',NULL),(15,'2025-06-03',NULL,NULL,0,'Formation','Formation Motion Design'),
+-- 4 Juin
+(1,'2025-06-04','08:00','17:00',8.00,'Present',NULL),(2,'2025-06-04','07:50','17:10',8.00,'Present',NULL),(3,'2025-06-04','08:00','17:00',8.00,'Present',NULL),(4,'2025-06-04','08:00','17:00',8.00,'Present',NULL),(5,'2025-06-04','08:00','17:00',8.00,'Present',NULL),(6,'2025-06-04','08:00','17:00',8.00,'Present',NULL),(7,'2025-06-04','09:00','18:00',8.00,'Present',NULL),(8,'2025-06-04','09:00','18:30',8.50,'Present','Heures sup urgentes'),(9,'2025-06-04','08:00','17:00',8.00,'Present',NULL),(10,'2025-06-04','08:00','17:00',8.00,'Present',NULL),(11,'2025-06-04','08:00','17:00',8.00,'Present',NULL),(12,'2025-06-04','08:00','17:00',8.00,'Present',NULL),(13,'2025-06-04','09:00','18:00',8.00,'Present',NULL),(14,'2025-06-04','07:00','16:00',8.00,'Present',NULL),(15,'2025-06-04',NULL,NULL,0,'Formation','Formation Motion Design'),
+-- 5 Juin
+(1,'2025-06-05','08:00','17:00',8.00,'Present',NULL),(2,'2025-06-05','07:55','17:05',8.00,'Present',NULL),(3,'2025-06-05','08:00','17:00',8.00,'Present',NULL),(4,'2025-06-05','08:00','17:00',8.00,'Present',NULL),(5,'2025-06-05','08:00','17:00',8.00,'Present',NULL),(6,'2025-06-05','08:00','17:00',8.00,'Present',NULL),(7,'2025-06-05','09:00','18:00',8.00,'Present',NULL),(8,'2025-06-05','09:00','18:00',8.00,'Present',NULL),(9,'2025-06-05','08:00','17:00',8.00,'Present',NULL),(10,'2025-06-05','08:00','17:00',8.00,'Present',NULL),(11,'2025-06-05','08:00','17:00',8.00,'Present',NULL),(12,'2025-06-05','08:00','17:00',8.00,'Present',NULL),(13,'2025-06-05','09:00','18:00',8.00,'Present',NULL),(14,'2025-06-05','07:00','16:00',8.00,'Present',NULL),(15,'2025-06-05',NULL,NULL,0,'Formation','Formation Motion Design'),
+-- 6 Juin
+(1,'2025-06-06','08:00','17:00',8.00,'Present',NULL),(2,'2025-06-06','07:52','17:08',8.00,'Present',NULL),(3,'2025-06-06','08:00','17:00',8.00,'Present',NULL),(4,'2025-06-06','08:00','17:00',8.00,'Present',NULL),(5,'2025-06-06','08:00','17:00',8.00,'Present',NULL),(6,'2025-06-06','08:00','17:00',8.00,'Present',NULL),(7,'2025-06-06','09:00','18:00',8.00,'Present',NULL),(8,'2025-06-06','09:00','18:00',8.00,'Present',NULL),(9,'2025-06-06','08:00','17:00',8.00,'Present',NULL),(10,'2025-06-06','08:00','17:00',8.00,'Present',NULL),(11,'2025-06-06','08:00','17:00',8.00,'Present',NULL),(12,'2025-06-06',NULL,NULL,0,'Absent','Absence injustifiee'),(13,'2025-06-06','09:00','18:00',8.00,'Present',NULL),(14,'2025-06-06','07:00','16:00',8.00,'Present',NULL),(15,'2025-06-06',NULL,NULL,0,'Formation','Dernier jour formation Motion Design'),
+-- 9 Juin
+(1,'2025-06-09','08:00','17:00',8.00,'Present',NULL),(2,'2025-06-09','07:50','17:10',8.00,'Present',NULL),(3,'2025-06-09','08:00','17:00',8.00,'Present',NULL),(4,'2025-06-09','08:00','17:00',8.00,'Present',NULL),(5,'2025-06-09','08:00','17:00',8.00,'Present',NULL),(6,'2025-06-09','08:00','17:00',8.00,'Present',NULL),(7,'2025-06-09','09:00','18:00',8.00,'Present',NULL),(8,'2025-06-09','09:00','18:00',8.00,'Present',NULL),(9,'2025-06-09','08:00','17:00',8.00,'Present',NULL),(10,'2025-06-09','08:00','17:00',8.00,'Present',NULL),(11,'2025-06-09','08:00','17:00',8.00,'Present',NULL),(12,'2025-06-09','08:00','17:00',8.00,'Present',NULL),(13,'2025-06-09','09:00','18:00',8.00,'Present',NULL),(14,'2025-06-09','07:00','16:00',8.00,'Present',NULL),(15,'2025-06-09','09:00','18:00',8.00,'Present',NULL),
+-- 10 Juin
+(1,'2025-06-10','08:00','17:00',8.00,'Present',NULL),(2,'2025-06-10','07:55','17:05',8.00,'Present',NULL),(3,'2025-06-10','08:00','17:00',8.00,'Present',NULL),(4,'2025-06-10','08:00','17:00',8.00,'Present',NULL),(5,'2025-06-10','08:00','17:00',8.00,'Present',NULL),(6,'2025-06-10','08:00','17:00',8.00,'Present',NULL),(7,'2025-06-10','09:20','18:00',7.50,'Retard','Embouteillage Analakely'),(8,'2025-06-10','09:00','18:00',8.00,'Present',NULL),(9,'2025-06-10','08:00','17:00',8.00,'Present',NULL),(10,'2025-06-10','08:00','17:00',8.00,'Present',NULL),(11,'2025-06-10','08:00','17:00',8.00,'Present',NULL),(12,'2025-06-10','08:00','17:00',8.00,'Present',NULL),(13,'2025-06-10','09:00','18:00',8.00,'Present',NULL),(14,'2025-06-10','07:00','16:00',8.00,'Present',NULL),(15,'2025-06-10','09:00','18:00',8.00,'Present',NULL),
+-- 11 Juin
+(1,'2025-06-11','08:00','17:00',8.00,'Present',NULL),(2,'2025-06-11','07:52','17:08',8.00,'Present',NULL),(3,'2025-06-11','08:00','17:00',8.00,'Present',NULL),(4,'2025-06-11','08:00','17:30',8.50,'Present','Presentation semestrielle direction'),(5,'2025-06-11','08:00','17:00',8.00,'Present',NULL),(6,'2025-06-11','08:00','17:00',8.00,'Present',NULL),(7,'2025-06-11','09:00','18:00',8.00,'Present',NULL),(8,'2025-06-11','09:00','19:00',9.00,'Present','Preparation bilan S1'),(9,'2025-06-11','08:00','17:00',8.00,'Present',NULL),(10,'2025-06-11','08:00','17:00',8.00,'Present',NULL),(11,'2025-06-11','08:00','17:00',8.00,'Present',NULL),(12,'2025-06-11','08:00','17:00',8.00,'Present',NULL),(13,'2025-06-11','09:00','18:00',8.00,'Present',NULL),(14,'2025-06-11','07:00','16:00',8.00,'Present',NULL),(15,'2025-06-11','09:00','18:00',8.00,'Present',NULL),
+-- 12 Juin
+(1,'2025-06-12','08:00','17:00',8.00,'Present',NULL),(2,'2025-06-12','07:55','17:05',8.00,'Present',NULL),(3,'2025-06-12','08:00','17:00',8.00,'Present',NULL),(4,'2025-06-12','08:00','17:00',8.00,'Present',NULL),(5,'2025-06-12','08:00','17:00',8.00,'Present',NULL),(6,'2025-06-12','08:00','17:00',8.00,'Present',NULL),(7,'2025-06-12','09:00','18:00',8.00,'Present',NULL),(8,'2025-06-12','09:00','18:00',8.00,'Present',NULL),(9,'2025-06-12','08:00','17:00',8.00,'Present',NULL),(10,'2025-06-12','08:15','17:00',7.75,'Retard','Pluie forte'),(11,'2025-06-12','08:00','17:00',8.00,'Present',NULL),(12,'2025-06-12','08:00','17:00',8.00,'Present',NULL),(13,'2025-06-12','09:00','18:00',8.00,'Present',NULL),(14,'2025-06-12','07:00','16:00',8.00,'Present',NULL),(15,'2025-06-12','09:00','18:00',8.00,'Present',NULL),
+-- 13 Juin
+(1,'2025-06-13','08:00','17:00',8.00,'Present',NULL),(2,'2025-06-13','07:50','17:10',8.00,'Present',NULL),(3,'2025-06-13','08:00','17:00',8.00,'Present',NULL),(4,'2025-06-13','08:00','17:00',8.00,'Present',NULL),(5,'2025-06-13','08:00','17:00',8.00,'Present',NULL),(6,'2025-06-13','08:00','17:00',8.00,'Present',NULL),(7,'2025-06-13','09:00','18:00',8.00,'Present',NULL),(8,'2025-06-13','09:00','18:00',8.00,'Present',NULL),(9,'2025-06-13','08:00','17:00',8.00,'Present',NULL),(10,'2025-06-13','08:00','17:00',8.00,'Present',NULL),(11,'2025-06-13','08:00','17:00',8.00,'Present',NULL),(12,'2025-06-13','08:00','17:00',8.00,'Present',NULL),(13,'2025-06-13','09:00','18:00',8.00,'Present',NULL),(14,'2025-06-13','07:00','16:00',8.00,'Present',NULL),(15,'2025-06-13','09:00','18:00',8.00,'Present',NULL),
+-- 16 Juin
+(1,'2025-06-16','08:00','17:00',8.00,'Present',NULL),(2,'2025-06-16','07:55','17:05',8.00,'Present',NULL),(3,'2025-06-16','08:00','17:00',8.00,'Present',NULL),(4,'2025-06-16','08:00','17:00',8.00,'Present',NULL),(5,'2025-06-16','08:00','17:00',8.00,'Present',NULL),(6,'2025-06-16','08:00','17:00',8.00,'Present',NULL),(7,'2025-06-16','09:00','18:00',8.00,'Present',NULL),(8,'2025-06-16','09:00','18:00',8.00,'Present',NULL),(9,'2025-06-16','08:00','17:00',8.00,'Present',NULL),(10,'2025-06-16','08:00','17:00',8.00,'Present',NULL),(11,'2025-06-16','08:00','17:00',8.00,'Present',NULL),(12,'2025-06-16','08:00','17:00',8.00,'Present',NULL),(13,'2025-06-16','09:00','18:00',8.00,'Present',NULL),(14,'2025-06-16','07:00','16:00',8.00,'Present',NULL),(15,'2025-06-16','09:00','18:00',8.00,'Present',NULL),
+-- 17 Juin
+(1,'2025-06-17','08:00','17:00',8.00,'Present',NULL),(2,'2025-06-17','07:52','17:08',8.00,'Present',NULL),(3,'2025-06-17','08:00','17:00',8.00,'Present',NULL),(4,'2025-06-17','08:00','17:00',8.00,'Present',NULL),(5,'2025-06-17','08:00','17:00',8.00,'Present',NULL),(6,'2025-06-17','08:00','17:00',8.00,'Present',NULL),(7,'2025-06-17','09:00','18:00',8.00,'Present',NULL),(8,'2025-06-17','09:00','18:00',8.00,'Present',NULL),(9,'2025-06-17','08:00','17:00',8.00,'Present',NULL),(10,'2025-06-17','08:00','17:00',8.00,'Present',NULL),(11,'2025-06-17','08:00','17:00',8.00,'Present',NULL),(12,'2025-06-17','08:00','17:00',8.00,'Present',NULL),(13,'2025-06-17','09:00','18:00',8.00,'Present',NULL),(14,'2025-06-17','07:00','16:00',8.00,'Present',NULL),(15,'2025-06-17','09:00','18:00',8.00,'Present',NULL),
+-- 18 Juin
+(1,'2025-06-18','08:00','17:00',8.00,'Present',NULL),(2,'2025-06-18','07:50','17:10',8.00,'Present',NULL),(3,'2025-06-18','08:00','17:00',8.00,'Present',NULL),(4,'2025-06-18','08:00','17:00',8.00,'Present',NULL),(5,'2025-06-18','08:00','17:00',8.00,'Present',NULL),(6,'2025-06-18','08:00','17:00',8.00,'Present',NULL),(7,'2025-06-18','09:00','18:00',8.00,'Present',NULL),(8,'2025-06-18','09:00','18:00',8.00,'Present',NULL),(9,'2025-06-18','08:00','17:00',8.00,'Present',NULL),(10,'2025-06-18','08:00','17:00',8.00,'Present',NULL),(11,'2025-06-18','08:00','17:00',8.00,'Present',NULL),(12,'2025-06-18','08:00','17:00',8.00,'Present',NULL),(13,'2025-06-18','09:00','18:00',8.00,'Present',NULL),(14,'2025-06-18','07:00','16:00',8.00,'Present',NULL),(15,'2025-06-18','09:00','18:00',8.00,'Present',NULL),
+-- 19 Juin
+(1,'2025-06-19','08:00','17:00',8.00,'Present',NULL),(2,'2025-06-19','07:55','17:05',8.00,'Present',NULL),(3,'2025-06-19','08:00','17:00',8.00,'Present',NULL),(4,'2025-06-19','08:00','17:00',8.00,'Present',NULL),(5,'2025-06-19','08:00','17:00',8.00,'Present',NULL),(6,'2025-06-19','08:00','17:00',8.00,'Present',NULL),(7,'2025-06-19','09:10','18:00',7.75,'Retard','Embouteillage'),(8,'2025-06-19','09:00','18:00',8.00,'Present',NULL),(9,'2025-06-19','08:00','17:00',8.00,'Present',NULL),(10,'2025-06-19','08:00','17:00',8.00,'Present',NULL),(11,'2025-06-19','08:00','17:00',8.00,'Present',NULL),(12,'2025-06-19','08:00','17:00',8.00,'Present',NULL),(13,'2025-06-19','09:00','18:00',8.00,'Present',NULL),(14,'2025-06-19','07:05','16:00',7.92,'Present',NULL),(15,'2025-06-19','09:00','18:00',8.00,'Present',NULL),
+-- 20 Juin
+(1,'2025-06-20','08:00','17:00',8.00,'Present',NULL),(2,'2025-06-20','07:52','17:08',8.00,'Present',NULL),(3,'2025-06-20','08:00','17:00',8.00,'Present',NULL),(4,'2025-06-20','08:00','17:00',8.00,'Present',NULL),(5,'2025-06-20','08:00','17:00',8.00,'Present',NULL),(6,'2025-06-20','08:00','17:00',8.00,'Present',NULL),(7,'2025-06-20','09:00','18:00',8.00,'Present',NULL),(8,'2025-06-20','09:00','18:00',8.00,'Present',NULL),(9,'2025-06-20','08:00','17:00',8.00,'Present',NULL),(10,'2025-06-20','08:00','17:00',8.00,'Present',NULL),(11,'2025-06-20','08:00','17:00',8.00,'Present',NULL),(12,'2025-06-20','08:00','17:00',8.00,'Present',NULL),(13,'2025-06-20','09:00','18:00',8.00,'Present',NULL),(14,'2025-06-20','07:00','16:00',8.00,'Present',NULL),(15,'2025-06-20','09:00','18:00',8.00,'Present',NULL),
+-- 23 Juin
+(1,'2025-06-23','08:00','17:00',8.00,'Present',NULL),(2,'2025-06-23','07:55','17:05',8.00,'Present',NULL),(3,'2025-06-23','08:00','17:00',8.00,'Present',NULL),(4,'2025-06-23','08:00','17:00',8.00,'Present',NULL),(5,'2025-06-23',NULL,NULL,0,'Conge','Conge ete'),(6,'2025-06-23','08:00','17:00',8.00,'Present',NULL),(7,'2025-06-23','09:00','18:00',8.00,'Present',NULL),(8,'2025-06-23','09:00','18:00',8.00,'Present',NULL),(9,'2025-06-23','08:00','17:00',8.00,'Present',NULL),(10,'2025-06-23','08:00','17:00',8.00,'Present',NULL),(11,'2025-06-23','08:00','17:00',8.00,'Present',NULL),(12,'2025-06-23','08:20','17:00',7.50,'Retard','Retard transport'),(13,'2025-06-23','09:00','18:00',8.00,'Present',NULL),(14,'2025-06-23','07:00','16:00',8.00,'Present',NULL),(15,'2025-06-23','09:00','18:00',8.00,'Present',NULL),
+-- 24 Juin
+(1,'2025-06-24','08:00','17:00',8.00,'Present',NULL),(2,'2025-06-24','07:50','17:10',8.00,'Present',NULL),(3,'2025-06-24','08:00','17:00',8.00,'Present',NULL),(4,'2025-06-24','08:00','17:00',8.00,'Present',NULL),(5,'2025-06-24',NULL,NULL,0,'Conge','Conge ete'),(6,'2025-06-24','08:00','17:00',8.00,'Present',NULL),(7,'2025-06-24','09:00','18:00',8.00,'Present',NULL),(8,'2025-06-24','09:00','18:00',8.00,'Present',NULL),(9,'2025-06-24','08:00','17:00',8.00,'Present',NULL),(10,'2025-06-24','08:00','17:00',8.00,'Present',NULL),(11,'2025-06-24','08:00','17:00',8.00,'Present',NULL),(12,'2025-06-24','08:00','17:00',8.00,'Present',NULL),(13,'2025-06-24','09:00','18:00',8.00,'Present',NULL),(14,'2025-06-24','07:00','16:00',8.00,'Present',NULL),(15,'2025-06-24','09:00','18:00',8.00,'Present',NULL),
+-- 25 Juin
+(1,'2025-06-25','08:00','17:00',8.00,'Present',NULL),(2,'2025-06-25','07:55','17:05',8.00,'Present',NULL),(3,'2025-06-25','08:00','17:00',8.00,'Present',NULL),(4,'2025-06-25','08:00','17:00',8.00,'Present',NULL),(5,'2025-06-25',NULL,NULL,0,'Conge','Conge ete'),(6,'2025-06-25','08:00','17:00',8.00,'Present',NULL),(7,'2025-06-25','09:00','18:00',8.00,'Present',NULL),(8,'2025-06-25','09:00','19:00',9.00,'Present','Preparation bilan S1 final'),(9,'2025-06-25','08:00','17:00',8.00,'Present',NULL),(10,'2025-06-25','08:00','17:00',8.00,'Present',NULL),(11,'2025-06-25','08:00','17:00',8.00,'Present',NULL),(12,'2025-06-25','08:00','17:00',8.00,'Present',NULL),(13,'2025-06-25','09:00','18:00',8.00,'Present',NULL),(14,'2025-06-25','07:00','16:00',8.00,'Present',NULL),(15,'2025-06-25','09:00','18:00',8.00,'Present',NULL),
+-- 26 Juin
+(1,'2025-06-26','08:00','17:00',8.00,'Present',NULL),(2,'2025-06-26','07:52','17:08',8.00,'Present',NULL),(3,'2025-06-26','08:00','17:00',8.00,'Present',NULL),(4,'2025-06-26','08:00','17:00',8.00,'Present',NULL),(5,'2025-06-26',NULL,NULL,0,'Conge','Conge ete'),(6,'2025-06-26','08:00','17:00',8.00,'Present',NULL),(7,'2025-06-26','09:00','18:00',8.00,'Present',NULL),(8,'2025-06-26','09:00','18:00',8.00,'Present',NULL),(9,'2025-06-26','08:00','17:00',8.00,'Present',NULL),(10,'2025-06-26','08:00','17:00',8.00,'Present',NULL),(11,'2025-06-26','08:00','17:00',8.00,'Present',NULL),(12,'2025-06-26','08:00','17:00',8.00,'Present',NULL),(13,'2025-06-26','09:00','18:00',8.00,'Present',NULL),(14,'2025-06-26','07:00','16:00',8.00,'Present',NULL),(15,'2025-06-26','09:00','18:00',8.00,'Present',NULL),
+-- 27 Juin
+(1,'2025-06-27','08:00','17:00',8.00,'Present',NULL),(2,'2025-06-27','07:55','17:05',8.00,'Present',NULL),(3,'2025-06-27','08:00','17:00',8.00,'Present',NULL),(4,'2025-06-27','08:00','17:00',8.00,'Present',NULL),(5,'2025-06-27',NULL,NULL,0,'Conge','Conge ete'),(6,'2025-06-27','08:00','17:00',8.00,'Present',NULL),(7,'2025-06-27','09:00','18:00',8.00,'Present',NULL),(8,'2025-06-27','09:00','18:00',8.00,'Present',NULL),(9,'2025-06-27','08:10','17:00',7.75,'Retard','Retard 10 min'),(10,'2025-06-27','08:00','17:00',8.00,'Present',NULL),(11,'2025-06-27','08:00','17:00',8.00,'Present',NULL),(12,'2025-06-27','08:00','17:00',8.00,'Present',NULL),(13,'2025-06-27','09:00','18:00',8.00,'Present',NULL),(14,'2025-06-27','07:00','16:00',8.00,'Present',NULL),(15,'2025-06-27','09:00','18:00',8.00,'Present',NULL),
+-- 30 Juin
+(1,'2025-06-30','08:00','17:00',8.00,'Present',NULL),(2,'2025-06-30','07:50','17:10',8.00,'Present',NULL),(3,'2025-06-30','08:00','17:00',8.00,'Present',NULL),(4,'2025-06-30','08:00','17:30',8.50,'Present','Bilan semestriel S1'),(5,'2025-06-30',NULL,NULL,0,'Conge','Conge ete'),(6,'2025-06-30','08:00','17:00',8.00,'Present',NULL),(7,'2025-06-30','09:00','18:00',8.00,'Present',NULL),(8,'2025-06-30','09:00','19:00',9.00,'Present','Deploiement bilan S1'),(9,'2025-06-30','08:00','17:00',8.00,'Present',NULL),(10,'2025-06-30','08:00','17:00',8.00,'Present',NULL),(11,'2025-06-30','08:00','17:00',8.00,'Present',NULL),(12,'2025-06-30','08:00','17:00',8.00,'Present',NULL),(13,'2025-06-30','09:00','18:00',8.00,'Present',NULL),(14,'2025-06-30','07:00','16:00',8.00,'Present',NULL),(15,'2025-06-30','09:00','18:00',8.00,'Present',NULL);
+
+-- ============================================================
+-- 13. CONGES SUPPLEMENTAIRES Q2 2025
+-- ============================================================
+INSERT INTO Conge (id_employe, type_conge, date_debut, date_fin, nombre_jours, motif,
+                   statut, date_demande, approuve_par)
+VALUES
+    (5, 'Annuel',      '2025-04-25', '2025-04-30', 4,  'Repos familial',                 'Approuve',  '2025-04-10', 'Direction Generale'),
+    (1, 'Annuel',      '2025-04-07', '2025-04-08', 2,  'Vacances Paques',                'Approuve',  '2025-03-20', 'Direction Generale'),
+    (7, 'Annuel',      '2025-04-07', '2025-04-08', 2,  'Vacances Paques',                'Approuve',  '2025-03-20', 'ANDRIANARISOA Faly'),
+    (3, 'Annuel',      '2025-04-14', '2025-04-14', 1,  'Repos post-formation',           'Approuve',  '2025-04-07', 'Direction Generale'),
+    (2, 'Annuel',      '2025-05-26', '2025-05-30', 5,  'Vacances printemps',             'Approuve',  '2025-05-05', 'Direction Generale'),
+    (10,'Maladie',     '2025-05-19', '2025-05-20', 2,  'Gastro-enterite',                'Approuve',  '2025-05-19', 'RAZAFINDRAKOTO Miora'),
+    (12,'Annuel',      '2025-05-26', '2025-05-30', 5,  'Vacances planifiees',            'Approuve',  '2025-05-10', 'RAHERIMANDIMBY Tiana'),
+    (5, 'Annuel',      '2025-06-23', '2025-06-27', 5,  'Conge ete',                      'Approuve',  '2025-06-01', 'Direction Generale'),
+    (6, 'Annuel',      '2025-06-16', '2025-06-20', 5,  'Vacances ete',                   'Approuve',  '2025-06-02', 'Direction Generale'),
+    (13,'Annuel',      '2025-06-23', '2025-06-27', 5,  'Conge ete programme',            'Approuve',  '2025-06-05', 'ANDRIANARISOA Faly'),
+    (11,'Exceptionnel','2025-05-05', '2025-05-05', 1,  'Deuil proche',                   'Approuve',  '2025-05-05', 'RAHERIMANDIMBY Tiana'),
+    (9, 'Annuel',      '2025-04-21', '2025-04-25', 5,  'Repos planifie',                 'Approuve',  '2025-04-05', 'RAKOTO Hery');
+
+-- ============================================================
+-- 14. ABSENCES SUPPLEMENTAIRES AVRIL-JUIN 2025
+-- ============================================================
+INSERT INTO Absence (id_employe, date_absence, type_absence, motif, duree_heures, justificatif)
+VALUES
+    ('12', '2025-04-08', 'Injustifiee', NULL,                              8.00, FALSE),
+    ('7',  '2025-04-15', 'Retard',      'Embouteillage Ivandry',           1.50, FALSE),
+    ('12', '2025-04-22', 'Injustifiee', NULL,                              8.00, FALSE),
+    ('10', '2025-04-28', 'Retard',      'Route bloquee accident',          2.00, FALSE),
+    ('9',  '2025-04-04', 'Retard',      'Retard 10 min',                   0.50, FALSE),
+    ('11', '2025-05-08', 'Justifiee',   'Accompagnement enfant malade',    4.00, TRUE),
+    ('12', '2025-05-07', 'Injustifiee', NULL,                              8.00, FALSE),
+    ('7',  '2025-05-21', 'Retard',      'Embouteillage matin',             2.00, FALSE),
+    ('15', '2025-05-02', 'Retard',      'Retard 10 min',                   0.50, FALSE),
+    ('12', '2025-05-28', 'Injustifiee', NULL,                              8.00, FALSE),
+    ('10', '2025-05-15', 'Retard',      'Embouteillage centre-ville',      1.50, FALSE),
+    ('3',  '2025-05-27', 'Justifiee',   'Consultation medicale specialiste',4.00, TRUE),
+    ('12', '2025-06-06', 'Injustifiee', NULL,                              8.00, FALSE),
+    ('7',  '2025-06-10', 'Retard',      'Embouteillage Analakely',         1.50, FALSE),
+    ('10', '2025-06-12', 'Retard',      'Pluie forte route glissante',     2.00, FALSE),
+    ('9',  '2025-06-27', 'Retard',      'Retard 10 min',                   0.50, FALSE),
+    ('12', '2025-06-23', 'Retard',      'Transport en panne',              1.50, FALSE),
+    ('14', '2025-06-19', 'Justifiee',   'Visite technique vehicule utilitaire',2.00, TRUE);
+
+-- ============================================================
+-- 15. HEURES SUPPLEMENTAIRES Q2 2025
+-- ============================================================
+INSERT INTO HeuresSupplementaires (id_employe, date_hs, nombre_heures, motif, taux_majoration,
+                                   statut, approuve_par, montant_calcule)
+VALUES
+-- IT-003 Toky: 1500000/173.33 = 8654 Ar/h
+(8,  '2025-04-02', 1.00, 'Deploiement feature critique soir',     1.50, 'Payee',    'ANDRIANARISOA Faly',  12981.00),
+(8,  '2025-04-10', 1.00, 'Maintenance corrective production',      2.00, 'Payee',    'ANDRIANARISOA Faly',  17308.00),
+(8,  '2025-04-18', 0.50, 'Finition sprint livraison',              1.50, 'Payee',    'ANDRIANARISOA Faly',   6490.50),
+(8,  '2025-05-08', 0.50, 'Sprint demo client',                     1.50, 'Payee',    'ANDRIANARISOA Faly',   6490.50),
+(8,  '2025-05-20', 0.50, 'Bug critique resolu',                    2.00, 'Payee',    'ANDRIANARISOA Faly',   8654.00),
+(8,  '2025-05-30', 1.00, 'Cloture sprint Mai',                     1.50, 'Payee',    'ANDRIANARISOA Faly',  12981.00),
+(8,  '2025-06-04', 0.50, 'Heures sup urgentes',                    1.50, 'Approuvee','ANDRIANARISOA Faly',   6490.50),
+(8,  '2025-06-11', 1.00, 'Preparation bilan S1',                   1.50, 'Approuvee','ANDRIANARISOA Faly',  12981.00),
+(8,  '2025-06-25', 1.00, 'Preparation bilan S1 final',             1.50, 'Approuvee','ANDRIANARISOA Faly',  12981.00),
+(8,  '2025-06-30', 1.00, 'Deploiement bilan S1',                   2.00, 'Approuvee','ANDRIANARISOA Faly',  17308.00),
+-- IT-002 Hasina: 1200000/173.33 = 6923 Ar/h
+(7,  '2025-04-18', 0.50, 'Finition sprint',                        1.50, 'Payee',    'ANDRIANARISOA Faly',   5192.25),
+(7,  '2025-06-30', 1.00, 'Bilan technique S1',                     1.50, 'Approuvee','ANDRIANARISOA Faly',  10384.50),
+-- IT-004 Lanto: 1600000/173.33 = 9231 Ar/h
+(13, '2025-04-10', 1.00, 'Deploiement heures sup soir',            2.00, 'Payee',    'ANDRIANARISOA Faly',  18462.00),
+(13, '2025-05-12', 2.00, 'Incident reseau mineur',                 1.50, 'Payee',    'ANDRIANARISOA Faly',  27693.00),
+(13, '2025-06-09', 2.50, 'Patch securite urgent',                  2.00, 'Approuvee','ANDRIANARISOA Faly',  46155.00),
+-- COM-002 Ando: 700000/173.33 = 4039 Ar/h
+(11, '2025-04-05', 4.00, 'Samedi foire regionale',                 1.50, 'Payee',    'RAHERIMANDIMBY Tiana',24234.00),
+(11, '2025-05-17', 4.00, 'Samedi evenement partenaire',            1.50, 'Payee',    'RAHERIMANDIMBY Tiana',24234.00),
+(11, '2025-06-14', 4.00, 'Samedi salon entreprises',               1.50, 'Approuvee','RAHERIMANDIMBY Tiana',24234.00),
+-- LOG-002 Njaka: 1400000/173.33 = 8077 Ar/h
+(14, '2025-04-12', 2.00, 'Inventaire rotation stock',              1.50, 'Payee',    'RANDRIANASOLO Vonjy', 24231.00),
+(14, '2025-05-31', 3.00, 'Inventaire mensuel entrepot',            1.50, 'Payee',    'RANDRIANASOLO Vonjy', 36346.50),
+(14, '2025-06-28', 3.00, 'Inventaire semestriel S1',               1.50, 'Approuvee','RANDRIANASOLO Vonjy', 36346.50),
+-- Directeurs en bilan semestriel
+(4,  '2025-06-11', 2.00, 'Presentation semestrielle direction',    1.50, 'Approuvee','Direction Generale',  41538.00),
+(1,  '2025-06-30', 2.00, 'Cloture bilan RH semestriel S1',         1.50, 'Approuvee','Direction Generale',  43270.00);
+
+-- ============================================================
+-- 16. FORMATIONS SUPPLEMENTAIRES Q2 2025 (en cours / terminees)
+--     Les formations planifiees sont deja dans data.sql
+--     On ajoute ici les resultats des formations terminees
+-- ============================================================
+-- Mise a jour logique : les formations planifiees Q2 se terminent
+-- On insere des nouvelles entrees pour les formations achevees en Q2
+INSERT INTO Formation (id_employe, titre, description, organisme, date_debut, date_fin,
+                       duree_heures, cout, statut, certification, note_obtenue)
+VALUES
+    (7,  'TypeScript et Architecture Frontend - RESULTAT',
+     'Formation approfondie TypeScript termine avec certification',
+     'Digital Academy Madagascar', '2025-05-05', '2025-05-09', 40, 550000, 'Terminee', TRUE,  17.00),
+    (9,  'Excel et Reporting RH - RESULTAT',
+     'Tableaux de bord RH avec Excel avance - termine',
+     'Microsoft Partner Tana',    '2025-05-12', '2025-05-14', 24, 300000, 'Terminee', FALSE, 15.50),
+    (15, 'Creation Visuelle et Motion Design - RESULTAT',
+     'After Effects et animation reseaux sociaux - termine',
+     'Digital Academy Madagascar', '2025-06-02', '2025-06-06', 40, 500000, 'Terminee', FALSE, 14.00),
+    (14, 'Gestion de Projet Logistique - RESULTAT',
+     'Methodes agiles appliquees a la supply chain - termine',
+     'ISCAM',                     '2025-05-19', '2025-05-23', 40, 600000, 'Terminee', TRUE,  16.50),
+    (11, 'CRM Avance et Pipeline Ventes - Q2',
+     'HubSpot CRM et optimisation du pipeline commercial',
+     'Sales Academy MG',          '2025-04-22', '2025-04-23', 16, 250000, 'Terminee', FALSE, 14.50),
+    (6,  'Google Analytics 4 - RESULTAT',
+     'Analyse avancee des donnees marketing et reporting',
+     'Digital Academy Madagascar', '2025-04-14', '2025-04-16', 24, 350000, 'Terminee', FALSE, 15.00),
+    (10, 'Power BI Avance - RESULTAT',
+     'DAX, modeles de donnees et tableaux de bord avances - certifie',
+     'Microsoft Partner Tana',    '2025-04-07', '2025-04-09', 24, 400000, 'Terminee', TRUE,  17.50),
+    (5,  'Lean Management et 5S - RESULTAT',
+     'Optimisation flux et reduction gaspillages - termine',
+     'ISCAM',                     '2025-06-16', '2025-06-18', 24, 350000, 'Terminee', FALSE, 16.00);
+
+-- ============================================================
+-- FIN DES DONNEES SUPPLEMENTAIRES Q2 2025
+-- ============================================================
+-- RECAPITULATIF DE CE FICHIER :
+--
+-- PAIE          : 45 nouvelles lignes (Avr/Mai/Juin, id 46-90)
+-- IMPOTS        : 135 nouvelles lignes (3 par paie, id 46-90)
+-- BULLETINS     : 45 nouvelles lignes (Avr/Mai/Juin, BP-2025-04/05/06)
+-- PRESENCES     : ~1260 nouvelles lignes (Avr=315, Mai=315, Juin=315)
+-- CONGES        : 12 nouvelles lignes Q2
+-- ABSENCES      : 18 nouvelles lignes Avr-Juin
+-- HEURES SUP    : 24 nouvelles lignes Q2
+-- FORMATIONS    : 8 nouvelles lignes (resultats formations Q2)
+--
+-- TOTAL GENERAL (data.sql + ce fichier) :
+-- Paie : 6 mois (Jan-Juin 2025) x 15 employes = 90 lignes
+-- Presence : ~6 mois complets = ~2700 lignes
+-- Performance : T3/T4 2024 + T1/T2 2025 = 4 periodes completes
+-- ============================================================
